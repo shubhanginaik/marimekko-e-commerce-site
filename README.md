@@ -72,3 +72,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 # Marimekko_product
 
 Trang Nguyen
+Trang Nguyen 1
