@@ -6,7 +6,7 @@ class ExploreourCollection extends Component {
     <SingleItem key={item.name} name={item.name} />
   ));
   render() {
-    return <div></div>;
+    return <div>{this.itemsListing}</div>;
   }
 }
 
