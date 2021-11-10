@@ -28,10 +28,10 @@ function App() {
           </li>
         </ul>
       </nav>
-      <switch>
+      <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/exploreourcollection" component={ExploreourCollection} />
-      </switch>
+      </Switch>
     </Router>
   );
 }

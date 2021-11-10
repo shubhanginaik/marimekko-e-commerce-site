@@ -3,6 +3,7 @@ import { items } from "./clothesdata";
 import SingleItem from "./SingleItem";
 import { Switch, Route } from "react-router";
 import ProductSingle from "./ProductSingle";
+
 class ExploreourCollection extends Component {
   state = {
     searchInput: "",
