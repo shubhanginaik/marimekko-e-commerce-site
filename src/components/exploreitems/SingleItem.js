@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useRouteMatch } from "react-router-dom";
+import "./SingleItem.css";
 const SingleItem = (props) => {
   const match = useRouteMatch();
   return (

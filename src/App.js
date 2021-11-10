@@ -1,37 +1,18 @@
 import "./App.css";
-import {
-  BrowserRouter as Router,
-  NavLink,
-  Switch,
-  Route,
-} from "react-router-dom";
-import ExploreourCollection from "./components/exploreitems/ExploreourCollection";
+import React, { useState } from "react";
+import Header from "./components/pageComponents/Header";
+import Main from "./components/pageComponents/Main";
+import { items } from "./components/exploreitems/clothesdata";
+
+import { BrowserRouter as Router } from "react-router-dom";
+
 function App() {
-  const Home = () => {
-    return (
-      <div>
-        <h3>this is home page</h3>
-      </div>
-    );
-  };
+  const { productItems } = items;
+  const [cartItems, setCartItems] = useState([]);
   return (
     <Router>
-      <nav>
-        <ul>
-          <li>
-            <NavLink to="/" exact>
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/exploreourcollection">Explore our Collection</NavLink>
-          </li>
-        </ul>
-      </nav>
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/exploreourcollection" component={ExploreourCollection} />
-      </Switch>
+      <Header />
+      <Main productItems={productItems} cartItems={cartItems} />
     </Router>
   );
 }

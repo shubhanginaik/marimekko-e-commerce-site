@@ -1,0 +1,36 @@
+header {
+  position: sticky;
+  top: 0;
+  height: 5rem;
+  width: 90%;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  background-color: olive;
+  padding-right: 2rem;
+  padding-left: 5rem;
+}
+.logo {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: whitesmoke;
+}
+.header-link {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ul li {
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+
+  padding-left: 1rem;
+}
+.link-list {
+  color: white;
+  text-decoration: none;
+}
