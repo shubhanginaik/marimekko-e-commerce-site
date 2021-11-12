@@ -23,7 +23,12 @@ class ExploreourCollection extends Component {
         .includes(this.state.searchInput.toLowerCase());
     });
     const itemsListing = itemsFilter.map((item) => (
-      <SingleItem key={item.name} name={item.name} price={item.price} />
+      <SingleItem
+        key={item.name}
+        name={item.name}
+        price={item.price}
+        image={item.image}
+      />
     ));
     return (
       <Switch>

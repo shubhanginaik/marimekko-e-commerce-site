@@ -8,10 +8,7 @@ const ProductSingle = () => {
       <div className="singleProduct">
         <p className="para"> {product}</p>
       </div>
-      <img
-        src={`https://source.unsplash.com/1600x900/?${product}`}
-        alt="aproduct_picture"
-      />
+      <img src={`/images/${product}.png`} alt="aproduct_picture" />
       <div>
         <button onClick={() => history.goBack()}>Back to Products</button>
       </div>

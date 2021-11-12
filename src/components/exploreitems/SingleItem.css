@@ -10,8 +10,8 @@
   width: 30vw;
   height: 60vh;
   text-transform: capitalize;
-  margin: 1rem;
-  padding: 2rem;
+  margin: 0.55rem;
+  padding: 0.5rem;
   border-width: 2px;
   border-style: solid;
   border-radius: 5%;
@@ -22,7 +22,10 @@ link {
   text-align: center;
 }
 .itemCard img {
-  width: 100%;
+  align-content: center;
+  width: 25vw;
+  height: 35vh;
+  align-self: center;
 }
 
 .itemCard:hover {
