@@ -2,7 +2,7 @@ import React from "react";
 import Home from "./Home";
 import ExploreourCollection from "../exploreitems/ExploreourCollection";
 import Cart from "./Cart";
-import Signup from "./Signup";
+import Login from "../pageComponents/Login";
 import { Switch, Route } from "react-router-dom";
 
 const Main = (productItems, cartItems) => {
@@ -11,7 +11,7 @@ const Main = (productItems, cartItems) => {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/exploreourcollection" component={ExploreourCollection} />
-        <Route path="/signup" exact component={Signup} />
+        <Route path="/Login" component={Login} />
         <Route path="/cart" exact component={Cart} exact />
         <Cart cartItems={cartItems} />
       </Switch>

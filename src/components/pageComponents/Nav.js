@@ -29,8 +29,8 @@ const Nav = () => {
             </li>
 
             <li>
-              <NavLink class="link-list" to="/signup">
-                Sign Up
+              <NavLink class="link-list" to="/Login">
+               Login
               </NavLink>
             </li>
             <li>
