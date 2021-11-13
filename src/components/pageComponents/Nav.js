@@ -13,8 +13,8 @@ const Nav = () => {
         <div class="header-link">
           <ul>
             <li>
-              <NavLink to="/sell-your-item">
-                <button>Sell your item</button>
+              <NavLink to="/sellproduct">
+                Sell your item
               </NavLink>
             </li>
             <li>

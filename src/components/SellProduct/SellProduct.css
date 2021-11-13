@@ -1,0 +1,118 @@
+/*********Shubhangi Naik*********/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+:root{
+    --border-radius:5px;
+
+}
+.sellProduct{
+   font-family: "Raleway",sans-serif;
+}
+form{
+    border:1px solid gray;
+    width: 60%;
+    height: 850px;
+    margin-left: 20%;
+    padding-top: 40px;
+    padding-left: 200px;
+    border-radius: var(--border-radius)
+}
+form h1{
+    margin-top: 30px;
+    margin-bottom: 60px;
+    text-align: center;
+    color: #4b0082;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    text-shadow: 1px 1px rgb(133, 74, 74);
+}
+form div{
+    margin-bottom: 35px;
+}
+form input[type="text"]{
+    margin-left: 140px;
+    width: 300px;
+    height: 50px;
+    font-family: "Raleway" sans-serif;
+    padding-left: 10px;
+    font-size: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 1px 0 1px rgba(133, 74, 74, 0.10);
+    cursor: text;
+}
+
+.size{
+    margin-right: 350px;
+    width: 200px;
+}
+form input[type="file"]{
+    cursor: pointer;
+    margin-left: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+form select{
+    display: block;
+    margin-left: 240px;
+    margin-top:-20px;
+    width: 300px;
+    height: 50px;
+    font-family: "Raleway" sans-serif;
+    padding-left: 10px;
+    font-size: 1.4rem;
+    border-radius: var(--border-radius);
+    background-color: white;
+    cursor: pointer;
+    border: 1px solid #aaa;
+    box-shadow: 0 1px 0 1px rgba(133, 74, 74, .10);
+}
+.size .categories:focus {
+    border-color: #aaa;
+    /* It'd be nice to use -webkit-focus-ring-color here but it doesn't work on box-shadow */
+    box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+    box-shadow: 0 0 0 3px -moz-mac-focusring;
+    color: #222; 
+    outline: none;
+  }
+.size::-ms-expand {
+    display: none;
+  }
+
+form label{
+    font-size: 1.55rem;
+}
+form span{
+    font-size: 1.4rem;
+}
+.product_description input{
+ margin-left: 240px;
+ cursor: pointer;
+}
+
+form [type="submit"]{
+    border-radius: var(--border-radius);
+    width:200px;
+    height: 50px;
+    font-size: 1.5rem;
+    background-color: #4b0082;
+    color: white;
+    cursor: pointer;
+    margin-top: 30px;
+}
+form [type="submit"]{
+    margin-left: 245px;
+}
+form label{
+    align-items: left;
+}
+form [type="submit"]:hover{
+    background-color: #9840d6;
+}
+
