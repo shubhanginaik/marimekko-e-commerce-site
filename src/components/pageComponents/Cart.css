@@ -1,0 +1,53 @@
+.cart_wrapper {
+  background: thistle;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 35rem;
+  margin-right: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  padding-right: 1rem;
+  width: 80vh;
+  height: 11vh;
+}
+
+.total_price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #40005d;
+  border: 1px solid white;
+  padding: 1rem;
+  border-radius: 12px;
+  width: 44%;
+  margin-left: 35rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.cart_price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #40005d;
+  border: 1px solid white;
+  border-radius: 12px;
+  padding-top: 1rem;
+  margin-bottom: auto;
+}
+
+@media (min-width: 580px) {
+  .expense-item__description {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1;
+  }
+
+  .cart_price {
+    font-size: 1.25rem;
+    padding: 0.5rem 1.5rem;
+  }
+}
