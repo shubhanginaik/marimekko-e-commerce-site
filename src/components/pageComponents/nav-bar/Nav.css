@@ -1,4 +1,4 @@
-header {
+/* header {
   position: sticky;
   top: 0;
   height: 5rem;
@@ -33,4 +33,33 @@ ul li {
 .link-list {
   color: white;
   text-decoration: none;
+}  */
+/* trang  nguyen start */
+.nav-bar {
+  margin: 2rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
 }
+.nav-bar nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+nav ul li a {
+  display: inline-block;
+  margin-right: 1rem;
+}
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+.navbar-right a {
+  margin: 1rem;
+}
+
+/* trang nguyen end  */

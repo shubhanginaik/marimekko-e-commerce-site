@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Oswald&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Oswald&display=swap");
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -11,8 +11,11 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
+} */
 
 /* trang nguyen - start*/
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+}
 /* trang nguyen - end*/
