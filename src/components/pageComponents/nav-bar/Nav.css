@@ -1,4 +1,4 @@
-/* header {
+header {
   position: sticky;
   top: 0;
   height: 5rem;
@@ -33,7 +33,7 @@ ul li {
 .link-list {
   color: white;
   text-decoration: none;
-} */
+} 
 /* trang  nguyen start */
 .nav-bar {
   margin-top: 2rem;
@@ -58,13 +58,18 @@ nav ul li a {
   display: inline-block;
   margin: 1rem;
 }
-/* .navbar-right a button {
+
+.navbar-right a button {
   width: 120px;
   height: 30px;
   color: white;
   background-color: black;
   font-size: inherit;
   border-radius: 10%;
-} */
+
+}
+
+
+
 
 /* trang nguyen end  */
