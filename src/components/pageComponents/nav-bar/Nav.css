@@ -36,7 +36,7 @@ ul li {
 }  */
 /* trang  nguyen start */
 .nav-bar {
-  margin: 2rem 4rem;
+  margin: 2rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
