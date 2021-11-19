@@ -55,7 +55,9 @@ body {
   height: 30vh;
   align-content: center;
   margin: 1rem;
+  align-items: left;
 }
+
 button {
   background-color: indigo;
   font-family: "Oswald", sans-serif;
@@ -80,4 +82,14 @@ nav ul {
 
   margin: 0.5rem;
   background-color: azure;
+}
+.imgdes img {
+  float: left;
+}
+.imgdes p {
+  float: right;
+  font-size: 2rem;
+  font-family: "Oswald", sans-serif;
+  padding: 1rem;
+  margin: 0.5rem;
 }
