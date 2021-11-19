@@ -10,8 +10,10 @@ function App() {
   return (
     <Router>
       <AppProvider>
-        <Header />
-        <Main />
+        <div className="max-width">
+          <Header />
+          <Main />
+        </div>
       </AppProvider>
     </Router>
   );

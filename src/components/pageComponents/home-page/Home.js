@@ -1,12 +1,16 @@
 import React from "react";
+import "./Home.css";
 import { NavLink } from "react-router-dom";
+import heroBanner from "./hero-banner-area.png";
+import { ReactComponent as JoinButton } from "./join-us-btn.svg";
+
 const Home = () => {
   return (
     <div>
-      <div className="hero-banner">
-        <h2>MARIMEKKO COMMUNITY BOOSTER</h2>
-        <h1>We created a sustainable community</h1>
-        <button>Join us</button>
+      <div className="hero-banner-section">
+        <img className="hero-banner" src={heroBanner} alt="heroBanner" />
+
+        <JoinButton className="join-button" />
       </div>
 
       <div className="top-picks">

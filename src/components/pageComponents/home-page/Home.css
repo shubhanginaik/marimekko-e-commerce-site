@@ -1,0 +1,12 @@
+.hero-banner-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.hero-banner {
+  margin-top: 8rem;
+  width: 100%;
+}
+.hero-banner-section .join-button {
+  cursor: pointer;
+}
