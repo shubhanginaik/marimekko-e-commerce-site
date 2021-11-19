@@ -1,6 +1,6 @@
 import React from "react";
-import Home from "./Home";
-import SellProduct from '../SellProduct/SellProduct';
+import Home from "./home-page/Home";
+import SellProduct from "../SellProduct/SellProduct";
 import ExploreourCollection from "../exploreitems/ExploreourCollection";
 import Cart from "./Cart";
 import Login from "../pageComponents/Login";
@@ -10,7 +10,7 @@ const Main = (productItems, cartItems) => {
   return (
     <div>
       <Switch>
-      <Route path="/sellproduct" component={SellProduct}/>
+        <Route path="/sellproduct" component={SellProduct} />
         <Route path="/" exact component={Home} />
         <Route path="/exploreourcollection" component={ExploreourCollection} />
         <Route path="/Login" component={Login} />
