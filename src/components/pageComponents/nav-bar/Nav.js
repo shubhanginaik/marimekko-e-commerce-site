@@ -5,6 +5,10 @@ import "./Nav.css";
 import { ReactComponent as ReactLogo } from "./2 1.svg";
 import { ReactComponent as ReactIcon1 } from "./icons_shopping-bag.svg";
 import { ReactComponent as ReactIcon2 } from "./icons_person.svg";
+import { ReactComponent as ReactIcon3 } from "./sell-your-item-btn.svg";
+import { ReactComponent as ReactLink1 } from "./Clothing.svg";
+import { ReactComponent as ReactLink2 } from "./Bag.svg";
+import { ReactComponent as ReactLink3 } from "./Others.svg";
 
 const Nav = () => {
   return (
@@ -13,17 +17,17 @@ const Nav = () => {
         <ul>
           <li>
             <NavLink to="/exploreourcollection" exact>
-              Clothing
+              <ReactLink1 />
             </NavLink>
           </li>
           <li>
             <NavLink to="/" exact>
-              Bag
+              <ReactLink2 />
             </NavLink>
           </li>
           <li>
             <NavLink to="/" exact>
-              Others
+              <ReactLink3 />
             </NavLink>
           </li>
         </ul>
@@ -34,11 +38,8 @@ const Nav = () => {
       </NavLink>
 
       <div className="navbar-right">
-
-        <NavLink to="/sellproduct">Sell your item</NavLink>
-
         <NavLink to="/sellproduct">
-          <button>Sell your item</button>
+          <ReactIcon3 />
         </NavLink>
 
         <NavLink to="/cart">
