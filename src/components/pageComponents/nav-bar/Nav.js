@@ -34,9 +34,7 @@ const Nav = () => {
       </NavLink>
 
       <div className="navbar-right">
-        <NavLink to="/sellproduct">
-          <button>Sell your item</button>
-        </NavLink>
+        <NavLink to="/sellproduct">Sell your item</NavLink>
         <NavLink to="/cart">
           <ReactIcon1 />
         </NavLink>
