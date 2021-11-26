@@ -1,24 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { auth, signInWithEmailAndPassword, signInWithGoogle } from "../../firebase";
+import {
+  auth,
+  signInWithEmailAndPassword,
+  signInWithGoogle,
+} from "../../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import "./Login.css";
 
-
 function Login() {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [user, loading, error] = useAuthState(auth);
-    const history = useHistory();
-    useEffect(() => {
-      if (loading) {
-        // maybe trigger a loading screen
-        return;
-      }
-      if (user) history.replace("/home");
-    }, [user, loading]);
-    return (
-        <div className="login">
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [user, loading, error] = useAuthState(auth);
+  const history = useHistory();
+  useEffect(() => {
+    if (loading) {
+      // maybe trigger a loading screen
+      return;
+    }
+    if (user) history.replace("/");
+  }, [user, loading]);
+  return (
+    <div className="login">
       <div className="login__container">
         <input
           type="text"
@@ -38,7 +41,7 @@ function Login() {
           className="login__btn"
           onClick={() => signInWithEmailAndPassword(email, password)}
         >
-            Login
+          Login
         </button>
         <button className="login__btn login__google" onClick={signInWithGoogle}>
           Login with Google
@@ -49,9 +52,9 @@ function Login() {
         <div>
           Don't have an account? <Link to="/register">Register</Link> now.
         </div>
-        </div>
+      </div>
     </div>
-    )
+  );
 }
 
-export default Login
+export default Login;

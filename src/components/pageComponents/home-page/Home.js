@@ -11,8 +11,8 @@ import { useHistory } from "react-router-dom";
 import { auth, db, logout } from "../../../firebase";
 
 const Home = () => {
-//changed
-const [user, loading] = useAuthState(auth);
+  //changed
+  const [user, loading] = useAuthState(auth);
   const [name, setName] = useState("");
   const history = useHistory();
   const fetchUserName = async () => {
@@ -21,7 +21,7 @@ const [user, loading] = useAuthState(auth);
         .collection("users")
         .where("uid", "==", user?.uid)
         .get();
-        const data = await query.docs[0].data();
+      const data = await query.docs[0].data();
       setName(data.name);
     } catch (err) {
       console.error(err);
@@ -70,16 +70,6 @@ const [user, loading] = useAuthState(auth);
           </NavLink>
         </div>
       </div>
-      <div className="dashboard">
-      <div className="dashboard__container">
-        Logged in as
-        <div>{name}</div>
-        <div>{user?.email}</div>
-        <button className="dashboard__btn" onClick={logout}>
-          Logout
-        </button>
-      </div>
-    </div>
     </div>
   );
 };
