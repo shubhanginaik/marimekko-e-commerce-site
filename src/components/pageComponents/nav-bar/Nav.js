@@ -9,43 +9,8 @@ import { ReactComponent as ReactIcon3 } from "./sell-your-item-btn.svg";
 import { ReactComponent as ReactLink1 } from "./Clothing.svg";
 import { ReactComponent as ReactLink2 } from "./Bag.svg";
 import { ReactComponent as ReactLink3 } from "./Others.svg";
-import { useEffect, useState } from "react";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { useHistory } from "react-router-dom";
 
-import { auth, db } from "../../../firebase";
 const Nav = () => {
-  //changed
-  const [user, loading] = useAuthState(auth);
-  const [name, setName] = useState("");
-  const history = useHistory();
-  const [signedOut, setSignedOut] = useState("");
-  const fetchUserName = async () => {
-    try {
-      const query = await db
-        .collection("users")
-        .where("uid", "==", user?.uid)
-        .get();
-      const data = await query.docs[0].data();
-      setName(data.name);
-    } catch (err) {
-      console.error(err);
-      alert("An error occured while fetching user data");
-    }
-  };
-
-  const logout = (e) => {
-    console.log("signedout");
-    auth.signOut();
-    setSignedOut(true);
-    /* e.preventDefault(); */
-  };
-  useEffect(() => {
-    if (loading) return;
-    if (!user) return history.replace("/");
-    fetchUserName();
-  }, [user, loading]);
-  //till here
   return (
     <div className="nav-bar">
       <nav>
@@ -83,17 +48,6 @@ const Nav = () => {
         <NavLink to="/Login">
           <ReactIcon2 />
         </NavLink>
-      </div>
-      <div className="dashboard">
-        <div className="dashboard__container">
-          Logged in as
-          <div>{name}</div>
-          <div>{user?.email}</div>
-          <button className="dashboard__btn" onClick={logout}>
-            Logout
-          </button>
-          {signedOut} <Redirect to={{ pathname: "/" }} />;
-        </div>
       </div>
     </div>
 
