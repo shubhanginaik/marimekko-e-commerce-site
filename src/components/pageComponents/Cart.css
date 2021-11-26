@@ -2,11 +2,10 @@
   background: thistle;
   display: flex;
   justify-content: space-between;
-  margin-left: 35rem;
+  margin-left: 2rem;
   margin-right: 2rem;
   padding-top: 1rem;
-  padding-bottom: 2rem;
-  padding-left: 2rem;
+
   padding-right: 1rem;
   width: 80vh;
   height: 11vh;
@@ -21,10 +20,15 @@
   padding: 1rem;
   border-radius: 12px;
   width: 44%;
-  margin-left: 35rem;
+  margin-left: 11rem;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+}
+.remove_btn {
+  size: auto;
+  padding-top: 1rem;
+  margin-top: 0;
 }
 
 .cart_price {

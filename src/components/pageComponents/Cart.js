@@ -1,15 +1,17 @@
 import React, { useContext } from "react";
 import { AppContext } from "../../Context";
 import "././Cart.css";
+import { items } from "../exploreitems/clothesdata";
 import { useParams, useHistory } from "react-router";
 
 const Cart = () => {
   const [itemsInCart, setItemsInCart] = useContext(AppContext);
   let totalPrice = 0;
   let history = useHistory();
-  const handleRemoveItem = (e) => {
-    const name = e.target.getAttribute("name");
-    setItemsInCart(itemsInCart.filter((item) => item.name !== name));
+  const removeItemHandle = (name) => {
+    const newList = itemsInCart.filter((item) => item.name !== name);
+
+    setItemsInCart(newList);
   };
 
   return (
@@ -22,6 +24,16 @@ const Cart = () => {
             totalPrice += parseInt(price);
             return (
               <div className="cart_wrapper">
+                <div>
+                  <button
+                    className="remove_btn"
+                    type="button"
+                    onClick={() => removeItemHandle(name)}
+                  >
+                    {" "}
+                    -{" "}
+                  </button>
+                </div>
                 <div key={id}>
                   <div>
                     <img src={`/images/${image}.png`} alt="a product_picture" />
@@ -33,6 +45,7 @@ const Cart = () => {
             );
           })}
           <div className="total_price"> Total Price: {totalPrice}</div>
+
           <button onClick={() => history.goBack()}>Continue Shopping</button>
         </>
       )}
