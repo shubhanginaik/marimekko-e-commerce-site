@@ -1,6 +1,6 @@
 import React from "react";
 
-import { NavLink } from "react-router-dom";
+import { NavLink, Redirect } from "react-router-dom";
 import "./Nav.css";
 import { ReactComponent as ReactLogo } from "./2 1.svg";
 import { ReactComponent as ReactIcon1 } from "./icons_shopping-bag.svg";
@@ -34,10 +34,11 @@ const Nav = () => {
     }
   };
 
-  const logout = () => {
+  const logout = (e) => {
     console.log("signedout");
     auth.signOut();
     setSignedOut(true);
+    /* e.preventDefault(); */
   };
   useEffect(() => {
     if (loading) return;
@@ -91,7 +92,7 @@ const Nav = () => {
           <button className="dashboard__btn" onClick={logout}>
             Logout
           </button>
-          {signedOut && history.push("/")};
+          {signedOut} <Redirect to={{ pathname: "/" }} />;
         </div>
       </div>
     </div>
