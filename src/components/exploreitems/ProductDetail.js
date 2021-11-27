@@ -3,7 +3,7 @@ import {useParams, useHistory} from "react-router";
 import {items} from "./clothesdata";
 import "./product-detail.css"
 
-const ProductSingle = () => {
+const ProductDetail = () => {
     let {product} = useParams();
     let history = useHistory();
     const itemsFilter = items.filter((item) => {
@@ -47,4 +47,4 @@ const ProductSingle = () => {
     );
 };
 
-export default ProductSingle;
+export default ProductDetail;
