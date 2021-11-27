@@ -35,31 +35,69 @@ ul li {
   text-decoration: none;
 }  */
 /* trang  nguyen start */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+}
 .nav-bar {
-  margin: 2rem 0;
+  border-bottom: 1px solid black;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid black;
+}
+.react-logo {
+  width: 450px;
+  height: 200px;
 }
 .nav-bar nav ul {
   list-style: none;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   background-color: white;
 }
 
 nav ul li a {
   display: inline-block;
-  margin-right: 1rem;
+  margin-right: 20px;
+  font-size: 25px;
 }
 .navbar-right {
   display: flex;
   align-items: center;
 }
 .navbar-right a {
-  margin: 1rem;
+  margin: 20px;
+}
+
+@media (max-width: 1360px) {
+  .sell-product {
+    width: 150px;
+  }
+  .navbar-right a {
+    margin: 10px;
+  }
+}
+
+@media (max-width: 1120px) {
+  .sell-product {
+    width: 120px;
+  }
+  .navbar-right a {
+    margin: 6px;
+  }
+  .heart-icon,
+  .person-icon {
+    height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  .react-logo {
+    width: 350px;
+    height: 150px;
+  }
 }
 
 /* trang nguyen end  */
