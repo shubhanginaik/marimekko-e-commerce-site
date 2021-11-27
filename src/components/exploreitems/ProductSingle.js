@@ -1,28 +1,30 @@
 import React from "react";
-import { useParams, useHistory } from "react-router";
-import { items } from "./clothesdata";
+import {useParams, useHistory} from "react-router";
+import {items} from "./clothesdata";
+import "./product-detail.css"
+
 const ProductSingle = () => {
-  let { product } = useParams();
-  let history = useHistory();
-  const itemsFilter = items.filter((item) => {
-    console.log("product is", product);
-    return item.name.toLowerCase().includes(product.toLowerCase());
-  });
-  console.log("itemsFilter", itemsFilter);
-  return (
-    <div className="singleinfo">
-      <div className="singleProduct">
-        <p className="para"> {product}</p>
-      </div>
-      <div className="imgdes">
-        <img src={`/images/${product}.png`} alt="aproduct_picture" />
-        <p className="description">{itemsFilter[0].description}</p>
-      </div>
-      <div>
-        <button onClick={() => history.goBack()}>Back to Products</button>
-      </div>
-    </div>
-  );
+    let {product} = useParams();
+    let history = useHistory();
+    const itemsFilter = items.filter((item) => {
+        return item.name.toLowerCase().includes(product.toLowerCase());
+    });
+
+    return (
+        <div className="product-detail">
+            <div className="product-detail-left">
+                <img className="product-image" src={`/images/${product}.png`} alt="product_picture"/>
+            </div>
+            <div className="product-detail-right">
+                <h1>{product}</h1>
+                <p>Amount</p>
+                <p>Phone number</p>
+                <p>Email Id</p>
+                <p>Location</p>
+                <p>Date Posted</p>
+            </div>
+        </div>
+    );
 };
 
 export default ProductSingle;
