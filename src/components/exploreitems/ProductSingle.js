@@ -16,12 +16,32 @@ const ProductSingle = () => {
                 <img className="product-image" src={`/images/${product}.png`} alt="product_picture"/>
             </div>
             <div className="product-detail-right">
-                <h1>{product}</h1>
-                <p>Amount</p>
-                <p>Phone number</p>
-                <p>Email Id</p>
-                <p>Location</p>
-                <p>Date Posted</p>
+                <div className="product-header">
+                    <div className="product-name">
+                        <p className="product-header-row">{product}</p>
+                    </div>
+                    <div className="product-price">
+                        <p className="product-header-row">25€</p>
+                    </div>
+                </div>
+                <div className="product-content-row">
+                    <div className="product-content-icon"><i className="fas fa-user"></i></div>
+                    <div className="product-content-text"><p>Name</p></div>
+                </div>
+                <div className="product-content-row">
+                    <div className="product-content-icon"><i className="fas fa-phone-alt fa-rotate-90"></i></div>
+                    <div className="product-content-text"><p>Phone</p></div>
+                </div>
+                <div className="product-content-row">
+                    <div className="product-content-icon"><i className="fas fa-envelope"></i></div>
+                    <div className="product-content-text"><p>Email</p></div>
+                </div>
+                <div className="product-footer">
+                    Place | Date
+                </div>
+                <p className="product-category">Category</p>
+                <textarea name="category" rows="4" cols="50"></textarea>
+
             </div>
         </div>
     );
