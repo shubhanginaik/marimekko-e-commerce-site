@@ -16,7 +16,7 @@
 form {
   border: 1px solid gray;
   width: 60%;
-  height: 850px;
+  height: 1000px;
   margin-left: 20%;
   padding-top: 40px;
   padding-left: 200px;
@@ -56,6 +56,20 @@ form input[type="file"] {
   font-size: 1.5rem;
   cursor: pointer;
 }
+.price{
+  position: relative;
+}
+.currency-code{
+  position:absolute;
+  left:100px;
+  top:10px;
+}
+.text-currency{
+  margin-left: 180px;
+  padding:10px 20px;
+  border:solid 1px #ccc;
+  border-radius:5px;
+}
 form select {
   display: block;
   margin-left: 240px;
@@ -94,7 +108,7 @@ form span {
   cursor: pointer;
 }
 
-form [type="submit"] {
+form [type="submit"],[type="button"] {
   border-radius: var(--border-radius);
   width: 200px;
   height: 50px;
@@ -106,10 +120,36 @@ form [type="submit"] {
 }
 form [type="submit"] {
   margin-left: 245px;
+  margin-right: 20px;
 }
 form label {
   align-items: left;
 }
 form [type="submit"]:hover {
   background-color: #9840d6;
+}
+/* popup*/
+.overlay{
+  position: fixed;
+  left:0;
+  top:0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:100%;
+  height: 100%;
+  background-color: rgba(34, 33, 33,.8);
+  border-radius: 5px;
+}
+.popup{
+  position: relative;
+  left:0;
+  top:0;
+  height: 30%;
+  width: 40%;
+  background-color: rgb(240, 221, 221);
+  padding: 2rem;
+  box-shadow: 0 0 5px #333;
+  margin: 0 auto;
+  border-radius: 5px;
 }

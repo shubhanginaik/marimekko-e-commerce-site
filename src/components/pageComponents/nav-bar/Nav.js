@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import { NavLink, Redirect } from "react-router-dom";
+import Home from "../home-page/Home";
 import "./Nav.css";
 import { ReactComponent as ReactLogo } from "./2 1.svg";
 import { ReactComponent as ReactIcon1 } from "./heart-vector.svg";
@@ -52,6 +53,18 @@ const Nav = () => {
         <NavLink to="/Login">
           <ReactIcon2 className="person-icon" />
         </NavLink>
+      </div>
+      <div className="dashboard">
+        <div className="dashboard__container">
+          Logged in as
+          <div>{name}</div>
+          <div>{user?.email}</div>
+          <button className="dashboard__btn" onClick={logout}>
+            Logout
+          </button>
+          {/* {signedOut} <Redirect to={{ pathname: "/" }} />; */}
+          {signedOut && <Home />}
+        </div>
       </div>
     </div>
 
