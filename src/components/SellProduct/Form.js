@@ -1,9 +1,20 @@
-import React from 'react';
+import React,{useState} from 'react';
+import Popup from './Popup';
+// import Popup from './Popup';
 
-const Form = (props) => {
+
+
+const Form = () => {
     const CloseHandler=()=>{
         window.location.reload();
     }
+    
+    // const [showPopup, setPopup]= useState(false)
+    // // const [heading, setHeading]= useState('')
+    // const previewHandler = ()=>{
+    //     setPopup(true)
+    // }
+    
     return (
         <form onSubmit={CloseHandler} >
             <h1>Post your add here....</h1>
@@ -11,60 +22,47 @@ const Form = (props) => {
             <label htmlFor="categories">Choose a category: </label>
             <select
             className="categories"
-             name="categories" 
+             name="category" 
              id="categories"
-             required >
+             required
+             
+              >
                  <option value="None" >None</option>
                 <option value="Clothing" >Clothing</option>
                 <option value="Bags">Bags</option>
                 <option value="Other">Other</option>
             </select>
             </div>
-           <div>
-            <label htmlFor="size"> Size: </label>
-            <select
-            className="size"
-             name="size" 
-             id="size"
-             required >
-                <option value="None" >None</option>
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-                <option value="XL">XL</option>
-            </select>
+            <div>
+                <label htmlFor="heading">Heading:</label>
+                <input type="text" id="heading" name="heading" />
+            </div>
+            <div className="product_description">
+                <label>Product description: </label>
+                <textarea rows='6' cols='40'name="description"/>
             </div>
             
             <div className="picture">
-                <label htmlFor="picture">Upload a Picture: </label>
-                <input type="file" />
-                
+                <label htmlFor="picture"> Upload a Picture: </label>
+                <input type="file" name="picture"/>
             </div>
-            <div className="product_description">
-                <h2>Product Description: </h2>
-                <div>
-                <input type="radio" value="New" name="product_description" selected/>
-                <span htmlFor="new"> Like new </span>
-                </div>
-                <div>
-                <input type="radio"
-                 value="Good" 
-                 checked 
-                 name="product_description"/>
-                <span htmlFor="good"> Good </span>
-                </div>
-                <div>
-                <input type="radio" value="Fair" name="product_description"/>
-                <span htmlFor="fair"> Fair </span>
-                </div>
+
+            <div className="price">
+                <label htmlFor="price">Price: </label>
+                <span className="currency-code">€</span>
+                <input type="number" name ="price" className="text-currency" 
+                required 
+                /> 
             </div>
+           
             <div>
             <label htmlFor="location"> Location:</label>
-            <input type="text" required/>
+            <input type="text" name = "location" required />
             </div>
             
             <div className="submit">
-                <input type="submit" value="Save" className="submit"/>
+                <input type="submit" value="Publish" className="submit"/>
+                <button>Preview</button>
                 
             </div>
 

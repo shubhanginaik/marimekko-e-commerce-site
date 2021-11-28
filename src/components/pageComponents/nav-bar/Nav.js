@@ -1,6 +1,7 @@
 import React from "react";
 
 import { NavLink, Redirect } from "react-router-dom";
+import Home from "../home-page/Home";
 import "./Nav.css";
 import { ReactComponent as ReactLogo } from "./2 1.svg";
 import { ReactComponent as ReactIcon1 } from "./icons_shopping-bag.svg";
@@ -92,7 +93,8 @@ const Nav = () => {
           <button className="dashboard__btn" onClick={logout}>
             Logout
           </button>
-          {signedOut} <Redirect to={{ pathname: "/" }} />;
+          {/* {signedOut} <Redirect to={{ pathname: "/" }} />; */}
+          {signedOut && <Home />}
         </div>
       </div>
     </div>
