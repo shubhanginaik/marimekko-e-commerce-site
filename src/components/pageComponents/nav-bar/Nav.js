@@ -1,88 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { NavLink, Redirect } from "react-router-dom";
 import Home from "../home-page/Home";
 import "./Nav.css";
 import { ReactComponent as ReactLogo } from "./2 1.svg";
-import { ReactComponent as ReactIcon1 } from "./icons_shopping-bag.svg";
+import { ReactComponent as ReactIcon1 } from "./heart-vector.svg";
 import { ReactComponent as ReactIcon2 } from "./icons_person.svg";
 import { ReactComponent as ReactIcon3 } from "./sell-your-item-btn.svg";
-import { ReactComponent as ReactLink1 } from "./Clothing.svg";
-import { ReactComponent as ReactLink2 } from "./Bag.svg";
-import { ReactComponent as ReactLink3 } from "./Others.svg";
-import { useEffect, useState } from "react";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { useHistory } from "react-router-dom";
+// import { ReactComponent as ReactLink1 } from "./Clothing.svg";
+// import { ReactComponent as ReactLink2 } from "./Bag.svg";
+// import { ReactComponent as ReactLink3 } from "./Others.svg";
 
-import { auth, db } from "../../../firebase";
 const Nav = () => {
-  //changed
-  const [user, loading] = useAuthState(auth);
-  const [name, setName] = useState("");
-  const history = useHistory();
-  const [signedOut, setSignedOut] = useState("");
-  const fetchUserName = async () => {
-    try {
-      const query = await db
-        .collection("users")
-        .where("uid", "==", user?.uid)
-        .get();
-      const data = await query.docs[0].data();
-      setName(data.name);
-    } catch (err) {
-      console.error(err);
-      alert("An error occured while fetching user data");
-    }
-  };
-
-  const logout = (e) => {
-    console.log("signedout");
-    auth.signOut();
-    setSignedOut(true);
-    /* e.preventDefault(); */
-  };
-  useEffect(() => {
-    if (loading) return;
-    if (!user) return history.replace("/");
-    fetchUserName();
-  }, [user, loading]);
-  //till here
   return (
     <div className="nav-bar">
       <nav>
         <ul>
           <li>
             <NavLink to="/exploreourcollection" exact>
-              <ReactLink1 />
+              {/* <ReactLink1 /> */}
+              Clothing
             </NavLink>
           </li>
           <li>
             <NavLink to="/" exact>
-              <ReactLink2 />
+              {/* <ReactLink2 /> */}
+              Bags
             </NavLink>
           </li>
           <li>
             <NavLink to="/" exact>
-              <ReactLink3 />
+              {/* <ReactLink3 /> */}
+              Others
             </NavLink>
           </li>
         </ul>
       </nav>
 
       <NavLink to="/" exact>
-        <ReactLogo style={{ height: 150 }} />
+        {/* <ReactLogo style={{ height: 150 }} /> */}
+        <ReactLogo className="react-logo" />
       </NavLink>
 
       <div className="navbar-right">
         <NavLink to="/sellproduct">
-          <ReactIcon3 />
+          <ReactIcon3 className="sell-product" />
         </NavLink>
 
         <NavLink to="/cart">
-          <ReactIcon1 />
+          <ReactIcon1 className="heart-icon" />
         </NavLink>
         <NavLink to="/Login">
-          <ReactIcon2 />
+          <ReactIcon2 className="person-icon" />
         </NavLink>
       </div>
       <div className="dashboard">

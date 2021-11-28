@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { items } from "./clothesdata";
 import SingleItem from "./SingleItem";
 import { Switch, Route } from "react-router";
-import ProductSingle from "./ProductSingle";
+import ProductDetail from "./ProductDetail";
 
 class ExploreourCollection extends Component {
   state = {
@@ -40,7 +40,7 @@ class ExploreourCollection extends Component {
           {itemsListing}
         </Route>
         <Route path={`${this.props.match.path}/:product`}>
-          <ProductSingle />
+          <ProductDetail />
         </Route>
       </Switch>
     );
