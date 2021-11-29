@@ -1,7 +1,11 @@
 import React from "react";
 import "./Home.css";
 import { NavLink } from "react-router-dom";
-import heroBanner from "./hero-banner-area.png";
+import heroBanner from "./hero-baner-area.svg";
+import goal from "./goal.svg";
+import how from "./how.svg";
+import mision from "./mision.svg";
+import vision from "./vision.svg";
 import { ReactComponent as JoinButton } from "./join-us-btn.svg";
 //changed
 import { useEffect, useState } from "react";
@@ -41,6 +45,17 @@ const Home = () => {
         <img className="hero-banner" src={heroBanner} alt="heroBanner" />
 
         <JoinButton className="join-button" />
+      </div>
+
+      <div className="after-hero-banner">
+        <div>
+          <img className="mision" src={mision} alt="" />
+          <img className="vision" src={vision} alt="" />
+        </div>
+        <div>
+          <img className="goal" src={goal} alt="" />
+          <img className="how" src={how} alt="" />
+        </div>
       </div>
 
       <div className="top-picks">
