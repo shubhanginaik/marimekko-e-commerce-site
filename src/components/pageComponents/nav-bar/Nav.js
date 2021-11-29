@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { NavLink, Redirect } from "react-router-dom";
 import "./Nav.css";
 import { ReactComponent as ReactLogo } from "./2 1.svg";
-import { ReactComponent as ReactIcon1 } from "./heart-vector.svg";
+import { ReactComponent as ReactIcon1 } from "./bytesize_heart.svg";
 import { ReactComponent as ReactIcon2 } from "./icons_person.svg";
 import { ReactComponent as ReactIcon3 } from "./sell-your-item-btn.svg";
 // import { ReactComponent as ReactLink1 } from "./Clothing.svg";

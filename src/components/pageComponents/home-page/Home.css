@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
 .hero-banner {
   margin-top: 4rem;
@@ -10,6 +11,74 @@
 .hero-banner-section .join-button {
   cursor: pointer;
 }
+.join-button {
+  position: absolute;
+  bottom: 10%;
+}
+.after-hero-banner {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+.mision,
+.vision,
+.goal,
+.how {
+  width: 350px;
+}
+@media (max-width: 1600px) {
+  .mision,
+  .vision,
+  .goal,
+  .how {
+    width: 320px;
+  }
+}
+@media (max-width: 1430px) {
+  .mision,
+  .vision,
+  .goal,
+  .how {
+    width: 280px;
+  }
+}
+@media (max-width: 1260px) {
+  .join-button {
+    height: 50px;
+  }
+  .mision,
+  .vision,
+  .goal,
+  .how {
+    width: 200px;
+  }
+}
+@media (max-width: 1011px) {
+  .join-button {
+    height: 40px;
+  }
+}
+@media (max-width: 890px) {
+  .join-button {
+    height: 33px;
+  }
+  .mision,
+  .vision,
+  .goal,
+  .how {
+    width: 150px;
+  }
+}
+@media (max-width: 740px) {
+  .join-button {
+    height: 30px;
+    bottom: 8%;
+  }
+}
+
 /*changed from here*/
 /* .dashboard {
   height: 100vh;
