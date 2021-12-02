@@ -7,6 +7,8 @@ import {
 } from "../../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import "./Login.css";
+import login from "./login.svg";
+import login_gg from "./login-gg.svg";
 
 function LoginNew() {
   const [email, setEmail] = useState("");
@@ -41,10 +43,10 @@ function LoginNew() {
           className="login__btn"
           onClick={() => signInWithEmailAndPassword(email, password)}
         >
-          Login
+          <img src={login} alt="" />
         </button>
         <button className="login__btn login__google" onClick={signInWithGoogle}>
-          Login with Google
+          <img src={login_gg} alt="" />
         </button>
         <div>
           <Link to="/reset">Forgot Password</Link>
