@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 
 import { NavLink, Redirect } from "react-router-dom";
 import "./Nav.css";
@@ -6,11 +6,21 @@ import { ReactComponent as ReactLogo } from "./2 1.svg";
 import { ReactComponent as ReactIcon1 } from "./heart-vector.svg";
 import { ReactComponent as ReactIcon2 } from "./icons_person.svg";
 import { ReactComponent as ReactIcon3 } from "./sell-your-item-btn.svg";
+import { AppContext } from "../../../Context";
 // import { ReactComponent as ReactLink1 } from "./Clothing.svg";
 // import { ReactComponent as ReactLink2 } from "./Bag.svg";
 // import { ReactComponent as ReactLink3 } from "./Others.svg";
 
 const Nav = () => {
+  const [itemsInCart] = useContext(AppContext);
+  // const totalPrice = itemsInCart.map(
+  //   ({ price }) => (totalPrice += parseInt(price))
+  // );
+  // const totalPrice = itemsInCart.reduce(
+  //   (prev, cur) => prev + cur.price,
+  //   0
+  // );
+
   return (
     <div className="nav-bar">
       <nav>
@@ -48,6 +58,7 @@ const Nav = () => {
 
         <NavLink to="/cart">
           <ReactIcon1 className="heart-icon" />
+          <div>{itemsInCart.length}</div>
         </NavLink>
         <NavLink to="/Login">
           <ReactIcon2 className="person-icon" />
