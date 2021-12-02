@@ -8,7 +8,7 @@ const Form = (props) => {
         <form onSubmit={CloseHandler} >
             <h1>Post your add here....</h1>
             <div>
-            <label htmlFor="categories">Choose a category: </label>
+            <label htmlFor="categories">Choose a category </label>
             <select
             className="categories"
              name="categories" 
@@ -21,50 +21,50 @@ const Form = (props) => {
             </select>
             </div>
            <div>
-            <label htmlFor="size"> Size: </label>
-            <select
-            className="size"
-             name="size" 
-             id="size"
-             required >
-                <option value="None" >None</option>
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-                <option value="XL">XL</option>
-            </select>
-            </div>
-            
-            <div className="picture">
-                <label htmlFor="picture">Upload a Picture: </label>
-                <input type="file" />
-                
+            <label htmlFor="heading"> Heading </label>
+            <input type="text"
+            className="heading"
+             name="heading" 
+             id="heading"
+             required />
             </div>
             <div className="product_description">
-                <h2>Product Description: </h2>
-                <div>
-                <input type="radio" value="New" name="product_description" selected/>
-                <span htmlFor="new"> Like new </span>
-                </div>
-                <div>
-                <input type="radio"
-                 value="Good" 
-                 checked 
-                 name="product_description"/>
-                <span htmlFor="good"> Good </span>
-                </div>
-                <div>
-                <input type="radio" value="Fair" name="product_description"/>
-                <span htmlFor="fair"> Fair </span>
-                </div>
+                <label htmlFor="description">Product Description </label>
+                <textarea rows="6" cols="47" name="description" id="description"></textarea>
             </div>
-            <div>
-            <label htmlFor="location"> Location:</label>
-            <input type="text" required/>
+            <div className="price">
+                <label htmlFor="price">Price</label>
+                <input type="number" name="price" id="price"/>
+            </div>
+            <div className="picture">
+                <label htmlFor="avatar">Upload a Picture </label>
+                <input type="file" id="avatar" name="avatar"
+                    accept="image/png, image/jpeg" multiple/>
             </div>
             
+            <div className="sellerinfo">
+            <label htmlFor="location"> Location </label>
+            <input type="text" name="location" id="location" required/>
+            </div>
+            <div>
+            <h2>Seller's Information</h2>
+            <div>
+            <label>Name</label>
+            <input type="text" maxLength="25"/>
+            </div>
+            <div>
+            <label>Email</label>
+            <input type="email" className="email" readOnly/>
+            </div>
+            <div >
+            <label>Phone number</label>
+            <input type="tel" id="phone" name="phone" className="phone" placeholder="123-45-678"
+                pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required/>
+            </div>
+            
+            </div>
             <div className="submit">
-                <input type="submit" value="Save" className="submit"/>
+                <input type="submit" value="Publish" className="submit"/>
                 
             </div>
 
