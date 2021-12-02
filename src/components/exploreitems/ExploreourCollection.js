@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { items } from "./clothesdata";
 import SingleItem from "./SingleItem";
 import { Switch, Route } from "react-router";
-import ProductSingle from "./ProductSingle";
+import ProductDetail from "./ProductDetail";
 
 class ExploreourCollection extends Component {
   state = {
@@ -13,9 +13,7 @@ class ExploreourCollection extends Component {
       searchInput: event.target.value,
     });
   };
-  itemsListing = items.map((item) => (
-    <SingleItem key={item.name} name={item.name} price={item.price} />
-  ));
+  itemsListing = items.map((item) => <SingleItem key={item.name} {...item} />);
   render() {
     const itemsFilter = items.filter((item) => {
       return item.name
@@ -23,12 +21,7 @@ class ExploreourCollection extends Component {
         .includes(this.state.searchInput.toLowerCase());
     });
     const itemsListing = itemsFilter.map((item) => (
-      <SingleItem
-        key={item.name}
-        name={item.name}
-        price={item.price}
-        image={item.image}
-      />
+      <SingleItem key={item.name} {...item} />
     ));
     return (
       <Switch>
@@ -40,7 +33,7 @@ class ExploreourCollection extends Component {
           {itemsListing}
         </Route>
         <Route path={`${this.props.match.path}/:product`}>
-          <ProductSingle />
+          <ProductDetail />
         </Route>
       </Switch>
     );
