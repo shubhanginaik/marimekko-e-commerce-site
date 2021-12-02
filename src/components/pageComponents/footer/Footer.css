@@ -1,0 +1,11 @@
+.footer-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.join-btn {
+  position: absolute;
+  bottom: 60%;
+  cursor: pointer;
+}
