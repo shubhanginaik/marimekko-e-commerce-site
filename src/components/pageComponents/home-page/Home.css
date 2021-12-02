@@ -21,13 +21,18 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
+  margin: 2rem 0;
 }
 .mision,
 .vision,
 .goal,
 .how {
   width: 350px;
+}
+
+.top-picks-line {
+  width: 100%;
+  margin: 4rem 0;
 }
 @media (max-width: 1600px) {
   .mision,
