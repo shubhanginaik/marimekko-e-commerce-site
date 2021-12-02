@@ -13,9 +13,7 @@ class ExploreourCollection extends Component {
       searchInput: event.target.value,
     });
   };
-  itemsListing = items.map((item) => (
-    <SingleItem key={item.name} name={item.name} price={item.price} />
-  ));
+  itemsListing = items.map((item) => <SingleItem key={item.name} {...item} />);
   render() {
     const itemsFilter = items.filter((item) => {
       return item.name
@@ -23,12 +21,7 @@ class ExploreourCollection extends Component {
         .includes(this.state.searchInput.toLowerCase());
     });
     const itemsListing = itemsFilter.map((item) => (
-      <SingleItem
-        key={item.name}
-        name={item.name}
-        price={item.price}
-        image={item.image}
-      />
+      <SingleItem key={item.name} {...item} />
     ));
     return (
       <Switch>
