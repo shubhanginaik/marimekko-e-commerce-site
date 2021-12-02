@@ -6,6 +6,7 @@ import goal from "./goal.svg";
 import how from "./how.svg";
 import mision from "./mision.svg";
 import vision from "./vision.svg";
+import topPicks from "./topPicks.svg";
 import { ReactComponent as JoinButton } from "./join-us-btn.svg";
 //changed
 import { useEffect, useState } from "react";
@@ -59,7 +60,7 @@ const Home = () => {
       </div>
 
       <div className="top-picks">
-        <h3>TOP PICKS FOR TODAY</h3>
+        <img className="top-picks-line" src={topPicks} alt="" />
         <div className="cards">
           <div className="card1">
             <img />
