@@ -21,27 +21,28 @@ const ProductDetail = () => {
                         <p className="product-header-row">{product}</p>
                     </div>
                     <div className="product-price">
-                        <p className="product-header-row">25€</p>
+                        <p className="product-header-row">{itemsFilter[0].price}</p>
                     </div>
                 </div>
                 <div className="product-content-row">
                     <div className="product-content-icon"><i className="fas fa-user"></i></div>
-                    <div className="product-content-text"><p>Name</p></div>
+                    <div className="product-content-text"><p>{itemsFilter[0].customerName}</p></div>
                 </div>
                 <div className="product-content-row">
                     <div className="product-content-icon"><i className="fas fa-phone-alt fa-rotate-90"></i></div>
-                    <div className="product-content-text"><p>Phone</p></div>
+                    <div className="product-content-text"><p>{itemsFilter[0].phone}</p></div>
                 </div>
                 <div className="product-content-row">
                     <div className="product-content-icon"><i className="fas fa-envelope"></i></div>
-                    <div className="product-content-text"><p>Email</p></div>
+                    <div className="product-content-text"><p>{itemsFilter[0].email}</p></div>
                 </div>
                 <div className="product-footer">
                     Place | Date
                 </div>
-                <p className="product-category">Category</p>
-                <textarea name="category" rows="4" cols="50"></textarea>
-
+                <p className="product-category">Category:{" "}<span>{itemsFilter[0].category}</span></p>
+                <br></br>
+                <p className="product-category">Description:<span><textarea name="category" rows="8" cols="60">{itemsFilter[0].description}</textarea></span></p>
+                
             </div>
         </div>
     );
