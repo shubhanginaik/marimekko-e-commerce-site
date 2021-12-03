@@ -11,10 +11,11 @@ const SingleItem = (props) => {
 
   return (
     <div className="itemCard">
+      <Link to={`${match.url}/${props.name}`}>
       <h2>{props.name}</h2>
       <img className="small" src={props.image} alt="product_picture" />
       <p>{props.price}</p>
-      <Link to={`${match.url}/${props.name}`}>Read more</Link>
+      
       <button
         disabled={itemsInCart.some((item) => item.id === props.id)}
         className="add_cart_btn"
@@ -25,6 +26,7 @@ const SingleItem = (props) => {
         {" "}
         Add to Cart{" "}
       </button>
+      </Link>
     </div>
   );
 };

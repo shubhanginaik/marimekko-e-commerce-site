@@ -54,4 +54,9 @@
     font-size: 1.25rem;
     padding: 0.5rem 1.5rem;
   }
+/* style added for images by rakhi please update this */
+  .cartImg img{
+width:60px;
+height:60px;
+  }
 }
