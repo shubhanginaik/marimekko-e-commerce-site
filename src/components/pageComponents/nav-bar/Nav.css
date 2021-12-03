@@ -61,43 +61,47 @@ body {
 nav ul li a {
   display: inline-block;
   margin-right: 20px;
-  font-size: 25px;
 }
 .navbar-right {
   display: flex;
   align-items: center;
 }
 .navbar-right a {
-  margin: 15px;
-}
-
-@media (max-width: 1360px) {
-  .sell-product {
-    width: 150px;
-  }
-  .navbar-right a {
-    margin: 10px;
-  }
+  margin-left: 15px;
 }
 
 @media (max-width: 1120px) {
-  .sell-product {
-    width: 120px;
-  }
-  .navbar-right a {
-    margin: 6px;
-  }
-  .heart-icon,
-  .person-icon {
-    height: 30px;
-    width: 30px;
-  }
   nav ul li a {
-    font-size: 20px;
+    margin-right: 10px;
   }
   .react-logo {
     width: 350px;
     height: 150px;
+  }
+  .buy-product,
+  .sell-product {
+    height: 60px;
+    width: 80px;
+  }
+}
+
+@media (max-width: 900px) {
+  .react-logo {
+    width: 300px;
+    height: 120px;
+  }
+  .cart-icon,
+  .person-icon {
+    height: 30px;
+    width: 30px;
+  }
+  .buy-product,
+  .sell-product {
+    height: 50px;
+    width: 60px;
+  }
+  nav ul li a {
+    margin-right: 5px;
   }
 }
 
