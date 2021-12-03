@@ -35,8 +35,8 @@ const Cart = () => {
                   </button>
                 </div>
                 <div key={id}>
-                  <div>
-                    <img src={`/images/${image}.png`} alt="a product_picture" />
+                  <div className="cartImg">
+                    <img src={`/images/${name}.png`} alt="a product_picture" />
                   </div>
                   <div>{name}</div>
                 </div>
