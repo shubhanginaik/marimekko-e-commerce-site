@@ -2,14 +2,12 @@ import React, { useContext } from "react";
 
 import { NavLink, Redirect } from "react-router-dom";
 import "./Nav.css";
-import { ReactComponent as ReactLogo } from "./2 1.svg";
-import { ReactComponent as ReactIcon1 } from "./bytesize_heart.svg";
+import { ReactComponent as ReactLogo } from "./logo.svg";
+import { ReactComponent as ReactIcon1 } from "./shopping-bag.svg";
 import { ReactComponent as ReactIcon2 } from "./icons_person.svg";
-import { ReactComponent as ReactIcon3 } from "./sell-your-item-btn.svg";
+import { ReactComponent as ReactIcon3 } from "./sell-btn.svg";
+import { ReactComponent as ReactIcon4 } from "./buy-btn.svg";
 import { AppContext } from "../../../Context";
-// import { ReactComponent as ReactLink1 } from "./Clothing.svg";
-// import { ReactComponent as ReactLink2 } from "./Bag.svg";
-// import { ReactComponent as ReactLink3 } from "./Others.svg";
 
 const Nav = () => {
   const [itemsInCart] = useContext(AppContext);
@@ -27,20 +25,12 @@ const Nav = () => {
         <ul>
           <li>
             <NavLink to="/exploreourcollection" exact>
-              {/* <ReactLink1 /> */}
-              Clothing
+              <ReactIcon4 className="buy-product" />
             </NavLink>
           </li>
           <li>
-            <NavLink to="/" exact>
-              {/* <ReactLink2 /> */}
-              Bags
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/" exact>
-              {/* <ReactLink3 /> */}
-              Others
+            <NavLink to="/sellproduct">
+              <ReactIcon3 className="sell-product" />
             </NavLink>
           </li>
         </ul>
@@ -52,12 +42,8 @@ const Nav = () => {
       </NavLink>
 
       <div className="navbar-right">
-        <NavLink to="/sellproduct">
-          <ReactIcon3 className="sell-product" />
-        </NavLink>
-
         <NavLink to="/cart">
-          <ReactIcon1 className="heart-icon" />
+          <ReactIcon1 className="cart-icon" />
           <div>{itemsInCart.length}</div>
         </NavLink>
         <NavLink to="/Login">
@@ -65,42 +51,6 @@ const Nav = () => {
         </NavLink>
       </div>
     </div>
-
-    // <div>
-    //   <header>
-    //     <h1 className="logo" to="/" exact>
-    //       <ReactLogo />
-    //     </h1>
-    //     <div class="header-link">
-    //       <ul>
-    //         <li>
-    //           <NavLink to="/sellproduct">Sell your item</NavLink>
-    //         </li>
-    //         <li>
-    //           <NavLink class="link-list" to="/" exact>
-    //             Home
-    //           </NavLink>
-    //         </li>
-    //         <li>
-    //           <NavLink class="link-list" to="/exploreourcollection">
-    //             Our collections
-    //           </NavLink>
-    //         </li>
-
-    //         <li>
-    //           <NavLink class="link-list" to="/Login">
-    //             Login
-    //           </NavLink>
-    //         </li>
-    //         <li>
-    //           <NavLink class="link-list" to="/cart">
-    //             <i class="fas fa-shopping-cart"></i>
-    //           </NavLink>
-    //         </li>
-    //       </ul>
-    //     </div>
-    //   </header>
-    // </div>
   );
 };
 
