@@ -48,8 +48,8 @@ body {
   align-items: center;
 }
 .react-logo {
-  width: 450px;
-  height: 200px;
+  width: 350px;
+  height: 100px;
 }
 .nav-bar nav ul {
   list-style: none;
@@ -60,7 +60,7 @@ body {
 
 nav ul li a {
   display: inline-block;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 .navbar-right {
   display: flex;
@@ -69,31 +69,34 @@ nav ul li a {
 .navbar-right a {
   margin-left: 15px;
 }
+.buy-product,
+.sell-product {
+  height: 60px;
+  width: 80px;
+}
 
 @media (max-width: 1120px) {
-  nav ul li a {
-    margin-right: 10px;
-  }
   .react-logo {
     width: 350px;
-    height: 150px;
+    height: 80px;
   }
   .buy-product,
   .sell-product {
-    height: 60px;
-    width: 80px;
-  }
-}
-
-@media (max-width: 900px) {
-  .react-logo {
-    width: 300px;
-    height: 120px;
+    height: 50px;
+    width: 70px;
   }
   .cart-icon,
   .person-icon {
     height: 30px;
     width: 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  .cart-icon,
+  .person-icon {
+    height: 25px;
+    width: 25px;
   }
   .buy-product,
   .sell-product {
