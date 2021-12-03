@@ -1,94 +1,105 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.itemCard {
-  display: inline-block;
-  box-shadow: 0 0 5px rgb(121, 121, 121);
-  transition: all 0.5s;
-  width: 30vw;
-  height: 60vh;
-  text-transform: capitalize;
-  margin: 0.55rem;
-  padding: 0.5rem;
-  border-width: 2px;
-  border-style: solid;
-  border-radius: 5%;
-}
-.itemCard h2,
-link {
-  text-align: center;
-}
-.itemCard img {
-  align-content: center;
-  width: 25vw;
-  height: 35vh;
-  align-self: center;
+.itemsCard {
+    display: inline-block;
+    box-shadow: 0 0 5px rgb(121, 121, 121);
+    transition: all 0.5s;
+    text-transform: capitalize;
+    margin: 0.55rem;
+    padding: 0.5rem;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5%;
+    width: 350px;
+    height: 420px;
 }
 
-.itemCard:hover {
-  box-shadow: 0 0 20px rgb(121, 121, 121);
-  cursor: pointer;
+.itemsCard h2,
+link {
+    text-align: center;
+}
+
+.itemsCard img {
+    align-content: center;
+    max-width: 320px;
+    max-height: 300px;
+    align-self: center;
+}
+
+.itemsCard:hover {
+    box-shadow: 0 0 20px rgb(121, 121, 121);
+    cursor: pointer;
 }
 body {
-  background-color: white;
+    background-color: white;
 }
-.searchInput {
-  padding: 2rem;
-  margin: 0.5rem;
-  display: flex;
-  align-items: center;
-  text-align: center;
+.searchbutton {
+    padding: 2rem;
+    margin: 0.5rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #749723;
+}
+.searchTerm {
+    width: 70%;
+    box-sizing: border-box;
+    border: 3px solid #749723;
+    padding: 5px;
+    height: 40px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9dbfaf;
 }
 
 .singleProduct {
-  padding: 2rem;
-  text-align: center;
-  align-content: center;
-  justify-items: center;
-  justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
 }
 .singleinfo img {
-  width: 30vw;
-  height: 30vh;
-  align-content: center;
-  margin: 1rem;
-  align-items: left;
+    width: 30vw;
+    height: 30vh;
+    align-content: center;
+    margin: 1rem;
 }
 
 button {
-  background-color: indigo;
-  font-family: "Oswald", sans-serif;
-  color: lavenderblush;
-  padding: 1rem;
-  margin: 4rem;
-  align-content: center;
-  justify-content: center;
-  border-radius: 5%;
+    background-color: #749723;
+    font-family: "Oswald", sans-serif;
+    color: lavenderblush;
+    padding: 0.5rem;
+    margin: 2rem;
+    align-content: center;
+    justify-content: center;
+    border-radius: 5%;
 }
 .para {
-  padding: 0.5rem;
-
-  margin: 0.25rem;
-  font-family: "Oswald", sans-serif;
-  font-size: 2rem;
+    padding: 0.5rem;
+    margin: 0.25rem;
+    font-family: "Oswald", sans-serif;
+    font-size: 2rem;
 }
 nav ul {
-  list-style-type: none;
-  display: block;
-  font-size: 2rem;
+    list-style-type: none;
+    display: block;
+    font-size: 2rem;
 
-  margin: 0.5rem;
-  background-color: azure;
+    margin: 0.5rem;
+    background-color: azure;
 }
 .imgdes img {
-  float: left;
+    float: left;
 }
 .imgdes p {
-  float: right;
-  font-size: 2rem;
-  font-family: "Oswald", sans-serif;
-  padding: 1rem;
-  margin: 0.5rem;
+    float: right;
+    font-size: 2rem;
+    font-family: "Oswald", sans-serif;
+    padding: 1rem;
+    margin: 0.5rem;
 }
