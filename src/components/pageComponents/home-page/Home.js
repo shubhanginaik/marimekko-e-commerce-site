@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.css";
 import { NavLink } from "react-router-dom";
-import heroBanner from "./hero-baner-area.svg";
+import heroBanner from "./hero-banner.svg";
 import goal from "./goal.svg";
 import how from "./how.svg";
 import mision from "./mision.svg";
@@ -49,14 +49,11 @@ const Home = () => {
       </div>
 
       <div className="after-hero-banner">
-        <div>
-          <img className="mision" src={mision} alt="" />
-          <img className="vision" src={vision} alt="" />
-        </div>
-        <div>
-          <img className="goal" src={goal} alt="" />
-          <img className="how" src={how} alt="" />
-        </div>
+        <img className="mision" src={mision} alt="" />
+        <img className="vision" src={vision} alt="" />
+
+        <img className="goal" src={goal} alt="" />
+        <img className="how" src={how} alt="" />
       </div>
 
       <div className="top-picks">
