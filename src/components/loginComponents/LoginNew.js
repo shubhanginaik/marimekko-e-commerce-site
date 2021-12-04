@@ -9,6 +9,10 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import "./Login.css";
 import login from "./login.svg";
 import login_gg from "./login-gg.svg";
+import welcome from "./welcome.svg";
+import close from "./close-login.svg";
+import person from "./person-login.svg";
+import key from "./key-login.svg";
 
 function LoginNew() {
   const [email, setEmail] = useState("");
@@ -25,27 +29,35 @@ function LoginNew() {
   return (
     <div className="login">
       <div className="login__container">
-        <input
-          type="text"
-          className="login__textBox"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="E-mail Address"
-        />
-        <input
-          type="password"
-          className="login__textBox"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          placeholder="Password"
-        />
+        <img className="welcome" src={welcome} alt="" />
+        <img className="close-login" src={close} alt="" />
+        <div className="login__textBox">
+          <input
+            className="login_textBox"
+            type="text"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="E-mail Address"
+          />
+          <img className="person" src={person} alt="" />
+        </div>
+        <div className="login__textBox">
+          <input
+            className="login_textBox"
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Password"
+          />
+          <img className="key" src={key} alt="" />
+        </div>
         <button
           className="login__btn"
           onClick={() => signInWithEmailAndPassword(email, password)}
         >
           <img src={login} alt="" />
         </button>
-        <button className="login__btn login__google" onClick={signInWithGoogle}>
+        <button className="login__btn" onClick={signInWithGoogle}>
           <img src={login_gg} alt="" />
         </button>
         <div>

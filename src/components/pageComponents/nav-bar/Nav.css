@@ -35,7 +35,14 @@ ul li {
   text-decoration: none;
 }  */
 /* trang  nguyen start */
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   font-family: "Roboto", sans-serif;
@@ -46,10 +53,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0;
 }
 .react-logo {
-  width: 350px;
-  height: 100px;
+  width: 400px;
+  height: 120px;
 }
 .nav-bar nav ul {
   list-style: none;
@@ -108,4 +116,48 @@ nav ul li a {
   }
 }
 
+@media (max-width: 780px) {
+  .cart-icon,
+  .person-icon {
+    height: 20px;
+    width: 20px;
+  }
+  .buy-product,
+  .sell-product {
+    height: 40px;
+    width: 50px;
+  }
+  nav ul li a {
+    margin-right: 3px;
+  }
+  .react-logo {
+    width: 300px;
+    height: 60px;
+  }
+  .navbar-right a {
+    margin-left: 10px;
+  }
+}
+@media (max-width: 630px) {
+  .cart-icon,
+  .person-icon {
+    height: 20px;
+    width: 20px;
+  }
+  .buy-product,
+  .sell-product {
+    height: 30px;
+    width: 40px;
+  }
+  nav ul li a {
+    margin-right: 3px;
+  }
+  .react-logo {
+    width: 200px;
+    height: 60px;
+  }
+  .navbar-right a {
+    margin-left: 8px;
+  }
+}
 /* trang nguyen end  */

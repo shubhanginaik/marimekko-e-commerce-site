@@ -1,9 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .hero-banner-section {
   display: flex;
   align-items: center;
   flex-direction: column;
   position: relative;
-  margin: 1rem 0;
+  padding: 0;
 }
 .hero-banner {
   width: 100%;
@@ -22,7 +27,7 @@
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 .mision,
 .vision,
@@ -33,7 +38,15 @@
 
 .top-picks-line {
   width: 100%;
-  margin: 1vh 0;
+}
+
+@media (max-width: 1250px) {
+  .mision,
+  .vision,
+  .goal,
+  .how {
+    width: 20vw;
+  }
 }
 /* @media (max-width: 1600px) {
   .mision,
