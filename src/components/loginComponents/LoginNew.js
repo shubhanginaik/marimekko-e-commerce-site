@@ -30,7 +30,12 @@ function LoginNew() {
     <div className="login">
       <div className="login__container">
         <img className="welcome" src={welcome} alt="" />
-        <img className="close-login" src={close} alt="" />
+        <img
+          className="close-login"
+          src={close}
+          alt=""
+          onClick={() => history.goBack()}
+        />
         <div className="login__textBox">
           <input
             className="login_textBox"

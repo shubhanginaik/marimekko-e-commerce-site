@@ -1,17 +1,18 @@
 /*********Shubhangi Naik*********/
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+/* 
+
 :root {
   --border-radius: 5px;
 }
 .sellProduct {
-  font-family: "Raleway", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 form {
   border: 1px solid gray;
@@ -28,20 +29,22 @@ form h1 {
   margin-bottom: 60px;
   text-align: center;
   color: #4b0082;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: bold;
   text-shadow: 1px 1px rgb(133, 74, 74);
 }
-h2{
+h2 {
   text-align: center;
   font-family: sans-serif;
   margin: 20px;
 }
 form div {
   margin-bottom: 35px;
-  
 }
-form input[type="text"],input[type="number"],input[type="tel"],input[type="email"] {
+form input[type="text"],
+input[type="number"],
+input[type="tel"],
+input[type="email"] {
   margin-left: 140px;
   width: 400px;
   height: 50px;
@@ -59,10 +62,9 @@ form input[type="text"],input[type="number"],input[type="tel"],input[type="email
 }
 form input[type="file"] {
   float: right;
-  width:320px;
+  width: 320px;
   margin-left: 100px;
   font-size: 1.5rem;
-  
 }
 form select {
   display: block;
@@ -79,7 +81,7 @@ form select {
 }
 .size .categories:focus {
   border-color: #aaa;
-  /* It'd be nice to use -webkit-focus-ring-color here but it doesn't work on box-shadow */
+ 
   box-shadow: 0 0 1px 3px rgba(59, 59, 59, 0.7);
   box-shadow: 0 0 0 3px -moz-mac-focusring;
   color: #222;
@@ -98,17 +100,17 @@ form span {
 .product_description input {
   cursor: text;
 }
-.phone{
+.phone {
   margin-top: -20px;
 }
-.picture{
+.picture {
   margin-top: 40px;
   margin-bottom: 30px;
 }
 .price {
-margin-top: 80px;
+  margin-top: 80px;
 }
-.email{
+.email {
   background-color: rgb(243, 240, 240);
 }
 
@@ -126,42 +128,93 @@ form [type="submit"] {
 form label {
   align-items: left;
 }
-form input,select,textarea{
+form input,
+select,
+textarea {
   float: right;
   margin-right: 50px;
 }
-form [type="submit"]{
+form [type="submit"] {
   margin-right: 50px;
 }
-div{
+div {
   padding: 10px;
 }
 form [type="submit"]:hover {
   background-color: #9840d6;
 }
 @media screen and (max-width: 600px) {
-   input,label,input[type=submit] {
+  input,
+  label,
+  input[type="submit"] {
     width: 100%;
     margin-top: 0;
     font-size: 60%;
   }
-  label{
+  label {
     float: left;
     padding-left: 0;
     margin-left: 0;
     font-size: 1rem;
   }
-  form{
+  form {
     height: auto;
     overflow: hidden;
   }
-  form input[type="text"],input[type="number"],input[type="tel"],input[type="email"] {
+  form input[type="text"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="email"] {
     margin-left: 0;
     width: 70%;
     height: 70%;
-    font-size: .7rem;
+    font-size: 0.7rem;
     border-radius: var(--border-radius);
     box-shadow: 0 1px 0 1px rgba(133, 74, 74, 0.1);
     cursor: text;
   }
+} */
+
+/* Trang Nguyen */
+
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.publishYourPost,
+.sellerInfomation {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.publishYourPost img,
+.sellerInfomation img {
+  margin: 30px;
+}
+
+.form__textBox .form_textBox {
+  width: 30vw;
+  height: 4vw;
+  border-radius: 5px;
+  margin: 0.2rem;
+  border: none;
+  background-color: #9bbf7f;
+  opacity: 40%;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.submit,
+.preview {
+  margin: 1rem 0;
+  width: 40%;
 }

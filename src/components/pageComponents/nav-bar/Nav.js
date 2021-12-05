@@ -37,7 +37,6 @@ const Nav = () => {
       </nav>
 
       <NavLink to="/" exact>
-        {/* <ReactLogo style={{ height: 150 }} /> */}
         <ReactLogo className="react-logo" />
       </NavLink>
 
@@ -46,7 +45,7 @@ const Nav = () => {
           <ReactIcon1 className="cart-icon" />
           <div>{itemsInCart.length}</div>
         </NavLink>
-        <NavLink to="/Login">
+        <NavLink to="/login">
           <ReactIcon2 className="person-icon" />
         </NavLink>
       </div>
