@@ -11,6 +11,7 @@
     flex-wrap: wrap;
     padding: 0 2rem;
     flex-direction: column;
+    margin-left: 80px;
 }
 .itemsCard {
     /*  display: inline-block; */
@@ -138,7 +139,7 @@ nav ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 500px;
+    margin-left: 590px;
     margin-top: 20px;
     margin-bottom: 20px;
     padding-left: 10px;
