@@ -7,9 +7,11 @@
 .footer {
   width: 100%;
 }
+
 .join-btn {
   position: absolute;
-  bottom: 60%;
+  bottom: 65%;
   cursor: pointer;
   height: 15%;
+
 }
