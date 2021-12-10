@@ -15,7 +15,6 @@
     width: 47%;
 }
 
-
 .product-image {
     max-width: 100%;
     background-repeat: no-repeat;
@@ -31,24 +30,32 @@
 
 .product-header {
     display: flex;
-    margin: 5px 0 40px;
+    margin: 5px 10px 10px 5px;
+    text-align: left;
+    justify-content: left;
 }
 
 .product-name {
     width: 80%;
     text-align: left;
+    margin-bottom: 10px;
 }
 
 .product-price {
     width: 20%;
     text-align: right;
+    padding-right: 50px;
 }
 
 .product-header-row {
     font-size: 30px;
     font-weight: bold;
+    text-align: left;
 }
 
+span.price {
+    padding-right: 60px;
+}
 
 .product-content-row {
     display: flex;
@@ -56,7 +63,7 @@
 }
 
 .product-content-row {
-    display: flex
+    display: flex;
 }
 
 .product-content-icon {
@@ -75,8 +82,7 @@ product-content-text {
     font-size: 20px;
     font-weight: bold;
     margin: 5px 5px;
-    
 }
-textarea{
-    font-weight: bold;  
+textarea {
+    font-weight: bold;
 }
