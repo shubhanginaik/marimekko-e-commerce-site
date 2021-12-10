@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { AppContext } from "../../Context";
+import { FaTrash } from "react-icons/fa";
 import "././Cart.css";
 import { items } from "../exploreitems/clothesdata";
 import { useParams, useHistory } from "react-router";
@@ -15,38 +16,52 @@ const Cart = () => {
   };
 
   return (
-    <div>
+    <div className="message_empty_cart">
+      <h1 className="title">Shopping Cart</h1>
       {itemsInCart.length === 0 ? (
-        "no items in the cart"
+        <h1 className="empty_cart_msg">"No items in the cart!"</h1>
       ) : (
         <>
           {itemsInCart.map(({ name, image, price, id }) => {
             totalPrice += parseInt(price);
             return (
-              <div className="cart_wrapper">
-                <div>
-                  <button
-                    className="remove_btn"
-                    type="button"
-                    onClick={() => removeItemHandle(name)}
-                  >
-                    {" "}
-                    -{" "}
-                  </button>
-                </div>
+              <div className="container">
+                <div></div>
                 <div key={id}>
-                  <div className="cartImg">
-                    <img src={`/images/${name}.png`} alt="a product_picture" />
+                  <div className="cart">
+                    <div className="product">
+                      <img
+                        className="thumbnail"
+                        src={`/images/${name}.png`}
+                        alt="a product_picture"
+                      />
+                      <div className="product-info">
+                        <h3 className="product-name">{name}</h3>
+                        <h2 className="product-price">{price}</h2>
+
+                        <button
+                          className="product_remove"
+                          type="button"
+                          onClick={() => removeItemHandle(name)}
+                        >
+                          {" "}
+                          <FaTrash className="trush_icon" />{" "}
+                        </button>
+                      </div>
+                    </div>
                   </div>
-                  <div>{name}</div>
                 </div>
-                <div className="cart_price">{price}</div>
               </div>
             );
           })}
-          <div className="total_price"> Total Price: {totalPrice}</div>
+          <div className="cart_total"> Total Price: {totalPrice}€</div>
 
-          <button onClick={() => history.goBack()}>Continue Shopping</button>
+          <button
+            className="back_shopping_btn"
+            onClick={() => history.goBack("/")}
+          >
+            Continue Shopping
+          </button>
         </>
       )}
     </div>
