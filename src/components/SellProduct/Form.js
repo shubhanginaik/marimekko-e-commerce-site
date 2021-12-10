@@ -28,7 +28,6 @@ const Form = (props) => {
               className="form_textBox"
               name="categories"
               id="categories"
-              placeholder="Choose a category"
               required
             >
               <option value="None">Choose a category</option>
@@ -70,7 +69,7 @@ const Form = (props) => {
             />
           </div>
           <div className=" upload">
-            <label htmlFor="avatar">Upload a Picture </label>
+            <label className="uploadPic" htmlFor="avatar">Upload a Picture </label>
             <input
               type="file"
               id="avatar"
@@ -112,7 +111,7 @@ const Form = (props) => {
               className="email"
               placeholder="Email"
               className="form_textBox"
-              readOnly
+              
             />
           </div>
           <div className="form__textBox">
@@ -129,10 +128,8 @@ const Form = (props) => {
           </div>
         </div>
 
-        <div className="buttons">
+        <div className="button">
           <input type="submit" value="Publish" className="submit" />
-
-          <input type="button" value="Preview" className="preview" />
         </div>
       </div>
     </form>
