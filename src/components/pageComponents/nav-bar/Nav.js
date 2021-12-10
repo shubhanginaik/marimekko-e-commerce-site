@@ -41,9 +41,10 @@ const Nav = () => {
       </NavLink>
 
       <div className="navbar-right">
-        <NavLink to="/cart">
-          <div className="items_in_cart">{itemsInCart.length}</div>
+        <NavLink className="cart" to="/cart">
+          
           <ReactIcon1 className="cart-icon" />
+          <div className="items_in_cart"><p>{itemsInCart.length}</p></div>
         </NavLink>
         <NavLink to="/login">
           <ReactIcon2 className="person-icon" />

@@ -4,15 +4,18 @@
   box-sizing: border-box;
 }
 .hero-banner-section {
+  margin: 5rem;
   display: flex;
   align-items: center;
-  flex-direction: column;
+  justify-content: space-between;
   position: relative;
   padding: 0;
 }
-.hero-banner {
-  width: 100%;
+
+.hero-banner-left, .hero-banner-right {
+  width: 40%;
 }
+
 .hero-banner-section .join-button {
   cursor: pointer;
 }
