@@ -7,11 +7,13 @@
 .footer {
   width: 100%;
 }
-
+.footer-section a {
+  margin-right:11%;
+}
 .join-btn {
   position: absolute;
   bottom: 65%;
   cursor: pointer;
   height: 15%;
-
+  
 }

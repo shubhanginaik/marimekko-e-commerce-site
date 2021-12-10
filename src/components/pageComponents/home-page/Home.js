@@ -1,7 +1,9 @@
 import React from "react";
 import "./Home.css";
 import { NavLink } from "react-router-dom";
-import heroBanner from "./hero-banner.svg";
+import heroBannerLeft from "./hero-banner-left.svg";
+import heroBannerRight from "./hero-banner-right.svg";
+
 import goal from "./goal.svg";
 import how from "./how.svg";
 import mision from "./mision.svg";
@@ -43,7 +45,8 @@ const Home = () => {
   return (
     <div>
       <div className="hero-banner-section">
-        <img className="hero-banner" src={heroBanner} alt="heroBanner" />
+        <img className="hero-banner-left" src={heroBannerLeft} alt="heroBanner" />
+        <img className="hero-banner-right" src={heroBannerRight} alt="heroBanner" />
 
         <JoinButton className="join-button" />
       </div>
@@ -74,7 +77,7 @@ const Home = () => {
             <h4>Product name</h4>
             <button>View product</button>
           </div>
-        </div>
+        </div> 
 
         <div className="explore-collection">
           <h3>BE YOURSELF, GO BOLDLY</h3>
