@@ -6,16 +6,14 @@ import { AppContext } from "../../Context";
 const SingleItem = (props) => {
   const match = useRouteMatch();
   const [itemsInCart, setItemsInCart] = useContext(AppContext);
-
-
-
   console.log(itemsInCart);
   return (
+      <div className="items-wrapper">
     <div className="itemsCard">
       <Link to={`${match.url}/${props.name}`}>
         <h2>{props.name}</h2>
         <img src={props.image} alt="product_picture" />
-        <p>{props.price}</p>
+        <p className="price">{props.price}</p>
         </Link>
         <button
           disabled={itemsInCart.some((item) => item.id === props.id)}
@@ -26,7 +24,7 @@ const SingleItem = (props) => {
         >
           Add to Cart
         </button>
-     
+    </div>
     </div>
   );
 };
