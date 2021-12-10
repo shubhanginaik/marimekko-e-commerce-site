@@ -30,7 +30,7 @@ class ExploreOurCollection extends Component {
                 <Route exact path={this.props.match.path}>
                     <div className="searchInput">
                         <h2>Search: </h2>
-                        <input type="text" onChange={this.searchInputHandler}></input>
+                        <input type="text" name="name" placeholder="Search" onChange={this.searchInputHandler}></input>
                     </div>
                     {itemsListing}
                 </Route>
