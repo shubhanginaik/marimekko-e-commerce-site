@@ -21,7 +21,7 @@ const ProductDetail = () => {
                         <p className="product-header-row">{product}</p>
                     </div>
                     <div className="product-price">
-                        <p className="product-header-row">{itemsFilter[0].price}</p>
+                        <p><span className="price">{itemsFilter[0].price}</span></p>
                     </div>
                 </div>
                 <div className="product-content-row">
@@ -42,7 +42,7 @@ const ProductDetail = () => {
                 <p className="product-category">Category:{" "}<span>{itemsFilter[0].category}</span></p>
                 <br></br>
                 <p className="product-category">Description:<span><textarea name="category" rows="8" cols="60">{itemsFilter[0].description}</textarea></span></p>
-                
+
             </div>
         </div>
     );
