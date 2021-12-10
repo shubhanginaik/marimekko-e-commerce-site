@@ -26,6 +26,7 @@
     padding: 30px;
     text-align: left;
     background: rgba(155, 191, 127, 0.4);
+    margin: 80px;
 }
 
 .product-header {
@@ -42,6 +43,7 @@
 }
 
 .product-price {
+    padding-right: 60px;
     width: 20%;
     text-align: right;
     padding-right: 50px;
@@ -51,10 +53,6 @@
     font-size: 30px;
     font-weight: bold;
     text-align: left;
-}
-
-span.price {
-    padding-right: 60px;
 }
 
 .product-content-row {
