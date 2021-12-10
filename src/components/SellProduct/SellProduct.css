@@ -6,7 +6,6 @@
   box-sizing: border-box;
 }
 /* 
-
 :root {
   --border-radius: 5px;
 }
@@ -54,7 +53,6 @@ input[type="email"] {
   box-shadow: 0 1px 0 1px rgba(133, 74, 74, 0.1);
   cursor: text;
 }
-
 .size {
   margin-right: 350px;
   width: 200px;
@@ -89,7 +87,6 @@ form select {
 .size::-ms-expand {
   display: none;
 }
-
 form label {
   font-size: 1.55rem;
 }
@@ -112,7 +109,6 @@ form span {
 .email {
   background-color: rgb(243, 240, 240);
 }
-
 form [type="submit"] {
   border-radius: var(--border-radius);
   width: 200px;
@@ -123,7 +119,6 @@ form [type="submit"] {
   cursor: pointer;
   margin-top: 30px;
 }
-
 form label {
   align-items: left;
 }
@@ -237,7 +232,7 @@ form {
   border-radius: 5px;
   border: none;
   background-color: #9bbf7f;
-  opacity: 40%;
+  
   box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
 }
 .upload {
@@ -246,52 +241,57 @@ form {
   align-items: center;
   margin: 0.2rem;
 }
+
 #description {
   height: 100%;
 }
 
-.buttons {
+.button{
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.submit,
-.preview {
+input[type="submit"] {
   margin: 1rem;
-  width: 5rem;
-  height: 2rem;
+  width: 6rem;
+  height: 3rem;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
   text-transform: uppercase;
   border-radius: 5px;
   font-weight: bold;
-}
-.submit {
   background: #749723;
   color: white;
-}
-.preview {
-  background: #ffffff;
-  border: 3px solid #749723;
-  box-sizing: border-box;
-  color: #749723;
+  padding: 0;
 }
 
-form input[type="text"],
-input[type="number"],
-input[type="tel"],
-input[type="email"],
-form textarea,
-form select,
+input,
+textarea,
+select,
 .upload {
   padding-left: 1rem;
-  font-family: "Roboto", sans-serif;
+  font-family: inherit;
+  font-size: inherit;
   font-size: 1rem;
   cursor: text;
+  color: black;
 }
 
+input::placeholder, textarea::placeholder{
+  font-weight: normal;
+  color: black;
+}
+
+.uploadPic {
+  font-family: inherit;
+  font-size: inherit;
+ 
+}
 form textarea {
   padding-top: 0.5rem;
 }
+
+
+
 @media screen and (max-width: 980px) {
   .form__textBox .form_textBox,
   .upload {
