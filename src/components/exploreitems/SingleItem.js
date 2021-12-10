@@ -7,6 +7,8 @@ const SingleItem = (props) => {
   const match = useRouteMatch();
   const [itemsInCart, setItemsInCart] = useContext(AppContext);
 
+
+
   console.log(itemsInCart);
   return (
     <div className="itemsCard">
