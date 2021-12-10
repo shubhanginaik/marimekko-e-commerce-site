@@ -16,6 +16,7 @@ const SingleItem = (props) => {
         <h2>{props.name}</h2>
         <img src={props.image} alt="product_picture" />
         <p>{props.price}</p>
+        </Link>
         <button
           disabled={itemsInCart.some((item) => item.id === props.id)}
           className="add_cart_btn"
@@ -25,7 +26,7 @@ const SingleItem = (props) => {
         >
           Add to Cart
         </button>
-      </Link>
+     
     </div>
   );
 };
