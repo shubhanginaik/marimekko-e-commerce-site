@@ -2,7 +2,7 @@ import React from "react";
 import "./Home.css";
 
 import SingleItem from "../../exploreitems/SingleItem";
-
+import {items}  from "./topPicks";
 
 import { NavLink, Link } from "react-router-dom";
 
@@ -50,7 +50,7 @@ const Home = () => {
     fetchUserName();
   }, [user, loading]);
   //till here
-
+  const itemsListing = items.map((item) => <SingleItem key={item.name} {...item} />);
   return (
     <div>
       <div className="hero">
@@ -83,9 +83,7 @@ const Home = () => {
  
         <div className="explore-collection">
           <div className="topPicksProduct">
-       <SingleItem/>
-       <SingleItem/>
-       <SingleItem/>
+       {itemsListing}
       
        </div>
           <NavLink to="/exploreourcollection">
