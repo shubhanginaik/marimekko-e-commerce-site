@@ -1,9 +1,12 @@
 import React from "react";
 import "./Home.css";
+
 import SingleItem from "../../exploreitems/SingleItem";
 import {Switch, Route} from "react-router";
 
-import { NavLink } from "react-router-dom";
+
+import { NavLink, Link } from "react-router-dom";
+
 import heroBannerLeft from "./hero-banner-left.svg";
 import heroBannerRight from "./hero-banner-right.svg";
 
@@ -12,8 +15,11 @@ import how from "./how.svg";
 import mision from "./mision.svg";
 import vision from "./vision.svg";
 import topPicks from "./topPicks.svg";
+
 import exploreCollection from "./explore-our-collection.svg";
 import { ReactComponent as JoinButton } from "./join-us-btn.svg";
+
+
 //changed
 import { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -48,12 +54,19 @@ const Home = () => {
 
   return (
     <div>
-      <div className="hero-banner-section">
-        <img className="hero-banner-left" src={heroBannerLeft} alt="heroBanner" />
-        <img className="hero-banner-right" src={heroBannerRight} alt="heroBanner" />
-
-        <JoinButton className="join-button" />
+      <div className="hero">
+        <div className="hero-banner-section">
+          <img className="hero-banner-left" src={heroBannerLeft} alt="heroBanner" />
+          
+          <img className="hero-banner-right" src={heroBannerRight} alt="heroBanner" />
+        </div>
+        <Link to="/login">
+          <img className="join-button" src={JoinButton} alt="join-button" />
+        </Link>
       </div>
+        
+        
+      
 
       <div className="after-hero-banner">
         <img className="mision" src={mision} alt="" />

@@ -4,24 +4,27 @@
   box-sizing: border-box;
 }
 .hero-banner-section {
-  margin: 5rem;
+  margin: 4rem 8rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
   padding: 0;
 }
 
 .hero-banner-left, .hero-banner-right {
-  width: 40%;
+  width: 45%;
 }
 
-.hero-banner-section .join-button {
+.hero .join-button {
   cursor: pointer;
+}
+.hero{
+  position: relative;
 }
 .join-button {
   position: absolute;
-  bottom: 15%;
+  bottom: 5%;
+  left: 8rem;
   height: 15%;
 }
 .after-hero-banner {
@@ -39,7 +42,9 @@
   width: 25vw;
 }
 
+
 .top-picks-line {
+  margin-top: 2rem;
   width: 100%;
 }
 
@@ -51,88 +56,3 @@
     width: 20vw;
   }
 }
-/* @media (max-width: 1600px) {
-  .mision,
-  .vision,
-  .goal,
-  .how {
-    width: 280px;
-  }
-}
-@media (max-width: 1430px) {
-  .mision,
-  .vision,
-  .goal,
-  .how {
-    width: 250px;
-  }
-  .join-button {
-    height: 55px;
-  }
-}
-@media (max-width: 1260px) {
-  .join-button {
-    height: 50px;
-  }
-  .mision,
-  .vision,
-  .goal,
-  .how {
-    width: 200px;
-  }
-}
-@media (max-width: 1100px) {
-  .join-button {
-    height: 40px;
-  }
-}
-@media (max-width: 890px) {
-  .join-button {
-    height: 33px;
-  }
-  .mision,
-  .vision,
-  .goal,
-  .how {
-    width: 150px;
-  }
-}
-@media (max-width: 740px) {
-  .join-button {
-    height: 25px;
-    bottom: 13%;
-  }
-  .mision,
-  .vision,
-  .goal,
-  .how {
-    width: 120px;
-  }
-} */
-
-/*changed from here*/
-/* .dashboard {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.dashboard__container {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  background-color: #dcdcdc;
-  padding: 30px;
-}
-.dashboard__btn {
-  padding: 10px;
-  font-size: 18px;
-  margin-top: 10px;
-  border: none;
-  color: white;
-  background-color: black;
-}
-.dashboard div {
-  margin-top: 7px;
-} */
