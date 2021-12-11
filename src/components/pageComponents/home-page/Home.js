@@ -17,7 +17,7 @@ import vision from "./vision.svg";
 import topPicks from "./topPicks.svg";
 
 import exploreCollection from "./explore-our-collection.svg";
-import { ReactComponent as JoinButton } from "./join-us-btn.svg";
+import JoinButton from "./join-us-btn.svg";
 
 
 //changed
