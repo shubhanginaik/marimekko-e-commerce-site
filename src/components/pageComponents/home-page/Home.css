@@ -46,6 +46,23 @@
 .top-picks-line {
   margin-top: 2rem;
   width: 100%;
+  margin: 2rem 0;
+}
+
+
+.topPicksProduct, .explore-collection{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem;
+}
+.explore-collection{
+  flex-direction: column;
+}
+
+.topPicksProduct{
+  width: 100%;
+  display: flex;
 }
 
 @media (max-width: 1250px) {

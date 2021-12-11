@@ -8,7 +8,7 @@ const ProductDetail = () => {
     let history = useHistory();
     const itemsFilter = items.filter((item) => {
         return item.name.toLowerCase().includes(product.toLowerCase());
-    });
+    }); 
 
     return (
         <div className="product-detail">
@@ -21,10 +21,10 @@ const ProductDetail = () => {
             </div>
             <div className="product-detail-right">
                 <div className="product-header">
-                    <div className="product-name">
+                    <div className="product-name-single">
                         <p className="product-header-row">{product}</p>
                     </div>
-                    <div className="product-price">
+                    <div className="product-price-single">
                         <p>{itemsFilter[0].price}</p>
                     </div>
                 </div>
@@ -57,14 +57,13 @@ const ProductDetail = () => {
                     Category: <span>{itemsFilter[0].category}</span>
                 </p>
                 <br></br>
-                <p className="product-category">
-                    Description:
+                <div className="product-description">
                     <span>
-            <textarea name="category" rows="8" cols="60">
-              {itemsFilter[0].description}
-            </textarea>
-          </span>
-                </p>
+                    <textarea name="category" rows="8" cols="60">
+                    {itemsFilter[0].description}
+                    </textarea>
+                    </span>
+                </div>
             </div>
         </div>
     );
