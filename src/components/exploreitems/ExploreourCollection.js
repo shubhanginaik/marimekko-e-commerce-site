@@ -3,6 +3,7 @@ import {items} from "./clothesdata";
 import SingleItem from "./SingleItem";
 import {Switch, Route} from "react-router";
 import ProductDetail from "./ProductDetail";
+import './explore-our-collection.css'
 
 class ExploreOurCollection extends Component {
     state = {
@@ -27,11 +28,15 @@ class ExploreOurCollection extends Component {
         ));
         return (
             <Switch>
-                <Route exact path={this.props.match.path}>
+                <Route  exact path={this.props.match.path}>
+                    <div className="explore-our-collection">
                     <div className="searchInput">
                         <input type="text" className="search" placeholder="Search" onChange={this.searchInputHandler}></input>
                     </div>
+                    <div className="product-page">
                     {itemsListing}
+                    </div>
+                    </div>
                 </Route>
                 <Route path={`${this.props.match.path}/:product`}>
                     <ProductDetail/>

@@ -1,7 +1,6 @@
 import React from "react";
 import "./Home.css";
 import SingleItem from "../../exploreitems/SingleItem";
-import {Switch, Route} from "react-router";
 
 import { NavLink } from "react-router-dom";
 import heroBannerLeft from "./hero-banner-left.svg";
@@ -68,11 +67,14 @@ const Home = () => {
         <div className="cards">
           
         </div> 
-
+ 
         <div className="explore-collection">
-          <SingleItem></SingleItem>
-          <SingleItem></SingleItem>
-          <SingleItem></SingleItem>
+          <div className="topPicksProduct">
+       <SingleItem/>
+       <SingleItem/>
+       <SingleItem/>
+      
+       </div>
           <NavLink to="/exploreourcollection">
             <img className="exploreCollection" src={exploreCollection} alt="explore-collection"/>
           </NavLink>

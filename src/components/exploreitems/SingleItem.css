@@ -11,7 +11,7 @@
     flex-wrap: wrap;
     padding: 0 2rem;
     flex-direction: column;
-    margin-left: 80px;
+    /* margin-left: 80px; */
 }
 .itemsCard {
     /*  display: inline-block; */
@@ -90,7 +90,7 @@ body {
     margin: 1rem;
 }
 
-button {
+.add_cart_btn {
     background-color: #749723;
     font-family: "Oswald", sans-serif;
     color: lavenderblush;
@@ -102,6 +102,10 @@ button {
     border-radius: 5%;
     position: absolute;
     padding: 10px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+border-radius: 3px;
+font-weight: bolder;
+cursor: pointer;
 }
 
 .para {
@@ -133,9 +137,17 @@ nav ul {
     height: 50px;
     border-radius: 5px;
     border: 2px solid #749723;
+    margin: 2rem 0;
+}
+.itemsCard a {
+   color: black;
+   font-family: "Roboto", sans-serif;
 }
 
-.search {
+.itemsCard a img {
+    padding: 1rem;
+}
+/* .search {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -143,4 +155,4 @@ nav ul {
     margin-top: 20px;
     margin-bottom: 20px;
     padding-left: 10px;
-}
+} */
