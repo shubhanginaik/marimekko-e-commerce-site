@@ -1,5 +1,8 @@
 import React from "react";
 import "./Home.css";
+import SingleItem from "../../exploreitems/SingleItem";
+import {Switch, Route} from "react-router";
+
 import { NavLink } from "react-router-dom";
 import heroBannerLeft from "./hero-banner-left.svg";
 import heroBannerRight from "./hero-banner-right.svg";
@@ -9,6 +12,7 @@ import how from "./how.svg";
 import mision from "./mision.svg";
 import vision from "./vision.svg";
 import topPicks from "./topPicks.svg";
+import exploreCollection from "./explore-our-collection.svg";
 import { ReactComponent as JoinButton } from "./join-us-btn.svg";
 //changed
 import { useEffect, useState } from "react";
@@ -62,27 +66,15 @@ const Home = () => {
       <div className="top-picks">
         <img className="top-picks-line" src={topPicks} alt="" />
         <div className="cards">
-          <div className="card1">
-            <img />
-            <h4>Product name</h4>
-            <button>View product</button>
-          </div>
-          <div className="card1">
-            <img />
-            <h4>Product name</h4>
-            <button>View product</button>
-          </div>
-          <div className="card1">
-            <img />
-            <h4>Product name</h4>
-            <button>View product</button>
-          </div>
+          
         </div> 
 
         <div className="explore-collection">
-          <h3>BE YOURSELF, GO BOLDLY</h3>
-          <NavLink to="/explore-our-collection">
-            <button>Explore our Collection</button>
+          <SingleItem></SingleItem>
+          <SingleItem></SingleItem>
+          <SingleItem></SingleItem>
+          <NavLink to="/exploreourcollection">
+            <img className="exploreCollection" src={exploreCollection} alt="explore-collection"/>
           </NavLink>
         </div>
       </div>

@@ -27,7 +27,7 @@ function LoginNew() {
     if (user) history.replace("/dashboard");
   }, [user, loading]);
   return (
-    <div className="login">
+    <div className="login-login">
       <div className="login__container">
         <img className="welcome" src={welcome} alt="" />
         <img
@@ -36,6 +36,7 @@ function LoginNew() {
           alt=""
           onClick={() => history.goBack()}
         />
+        <div className="login_container">
         <div className="login__textBox">
           <input
             className="login_textBox"
@@ -56,20 +57,26 @@ function LoginNew() {
           />
           <img className="key" src={key} alt="" />
         </div>
+
+        
         <button
           className="login__btn"
           onClick={() => signInWithEmailAndPassword(email, password)}
         >
-          <img src={login} alt="" />
+          <img className="login-email" src={login} alt="" />
         </button>
+
         <button className="login__btn" onClick={signInWithGoogle}>
-          <img src={login_gg} alt="" />
+          <img className="login-gg" src={login_gg} alt="" />
         </button>
+        
+
         <div>
           <Link to="/reset">Forgot Password</Link>
         </div>
         <div>
           Don't have an account? <Link to="/register">Register</Link> now.
+        </div>
         </div>
       </div>
     </div>
