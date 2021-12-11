@@ -4,24 +4,27 @@
   box-sizing: border-box;
 }
 .hero-banner-section {
-  margin: 5rem;
+  margin: 4rem 8rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
   padding: 0;
 }
 
 .hero-banner-left, .hero-banner-right {
-  width: 40%;
+  width: 45%;
 }
 
-.hero-banner-section .join-button {
+.hero .join-button {
   cursor: pointer;
+}
+.hero{
+  position: relative;
 }
 .join-button {
   position: absolute;
-  bottom: 15%;
+  bottom: 5%;
+  left: 8rem;
   height: 15%;
 }
 .after-hero-banner {
@@ -39,10 +42,13 @@
   width: 25vw;
 }
 
+
 .top-picks-line {
+  margin-top: 2rem;
   width: 100%;
   margin: 2rem 0;
 }
+
 
 .topPicksProduct, .explore-collection{
   display: flex;
@@ -58,6 +64,7 @@
   width: 100%;
   display: flex;
 }
+
 @media (max-width: 1250px) {
   .mision,
   .vision,
@@ -66,4 +73,3 @@
     width: 20vw;
   }
 }
-
