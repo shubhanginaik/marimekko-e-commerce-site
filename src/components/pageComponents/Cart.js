@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { AppContext } from "../../Context";
-import { FaTrash } from "react-icons/fa";
+import trash from "./trash.svg";
+import findMore from "./Find-more-items.svg"
 import "././Cart.css";
 import { items } from "../exploreitems/clothesdata";
 import { useParams, useHistory } from "react-router";
@@ -37,6 +38,7 @@ const Cart = () => {
                       />
                       <div className="product-info">
                         <h3 className="product-name">{name}</h3>
+                        <div className="price-trash">
                         <h2 className="product-price">{price}</h2>
 
                         <button
@@ -45,8 +47,9 @@ const Cart = () => {
                           onClick={() => removeItemHandle(name)}
                         >
                           {" "}
-                          <FaTrash className="trush_icon" />{" "}
+                          <img className="trush_icon"  src={trash} alt="trash-button"/>{" "}
                         </button>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -54,14 +57,17 @@ const Cart = () => {
               </div>
             );
           })}
+          
+          <div className="continue-total">
           <div className="cart_total"> Total Price: {totalPrice}€</div>
 
           <button
             className="back_shopping_btn"
             onClick={() => history.goBack("/")}
           >
-            Continue Shopping
+            <img className="find-more"  src={findMore} alt="findMore-button"/>
           </button>
+          </div>
         </>
       )}
     </div>
