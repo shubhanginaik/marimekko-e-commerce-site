@@ -15,7 +15,7 @@
 }
 .itemsCard {
     /*  display: inline-block; */
-    box-shadow: 0 0 5px rgb(121, 121, 121);
+    box-shadow: 0 0 5px #9BBF7F;
     transition: all 0.5s;
     text-transform: capitalize;
     margin: 0.55rem;
@@ -142,6 +142,8 @@ nav ul {
 .itemsCard a {
    color: black;
    font-family: "Roboto", sans-serif;
+    text-decoration: none; 
+
 }
 
 .itemsCard a img {
