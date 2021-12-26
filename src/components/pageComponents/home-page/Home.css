@@ -30,9 +30,9 @@
 .after-hero-banner {
   width: 100%;
   display: flex;
-  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
   margin: 1rem 0;
 }
 .mision,
@@ -66,10 +66,10 @@
 }
 
 @media (max-width: 1250px) {
-  .mision,
-  .vision,
-  .goal,
-  .how {
-    width: 20vw;
+  .hero-banner-section {
+    margin: 4rem 2rem;
+  }
+  .join-button {
+    left: 2rem;
   }
 }

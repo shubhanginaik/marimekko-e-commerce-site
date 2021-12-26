@@ -53,6 +53,7 @@ const Home = () => {
   const itemsListing = items.map((item) => <SingleItem key={item.name} {...item} />);
   return (
     <div>
+     
       <div className="hero">
         <div className="hero-banner-section">
           <img className="hero-banner-left" src={heroBannerLeft} alt="heroBanner" />
@@ -63,9 +64,6 @@ const Home = () => {
           <img className="join-button" src={JoinButton} alt="join-button" />
         </Link>
       </div>
-        
-        
-      
 
       <div className="after-hero-banner">
         <img className="mision" src={mision} alt="" />
@@ -74,6 +72,7 @@ const Home = () => {
         <img className="goal" src={goal} alt="" />
         <img className="how" src={how} alt="" />
       </div>
+      
 
       <div className="top-picks">
         <img className="top-picks-line" src={topPicks} alt="" />
