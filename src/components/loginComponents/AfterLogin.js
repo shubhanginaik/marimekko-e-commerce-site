@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useHistory } from "react-router-dom";
 import LogoutRedirect from "./LogoutRedirect";
-import { auth, db } from "../../../firebase";
+import { auth, db } from "../../firebase";
 const AfterLogin = () => {
   const [user, loading] = useAuthState(auth);
   const [name, setName] = useState("");
@@ -17,6 +17,7 @@ const AfterLogin = () => {
         .get();
       const data = await query.docs[0].data();
       setName(data.name);
+      
     } catch (err) {
       console.error(err);
       alert("An error occured while fetching user data");

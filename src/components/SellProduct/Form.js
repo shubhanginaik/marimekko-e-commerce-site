@@ -1,18 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import PublishPost from "./Publish your post.svg";
 import sellerInfo from "./SellerInfo.svg";
 import close from "./close.svg";
 
-const Form = (props) => {
-  const CloseHandler = () => {
-    window.location.reload();
+import {db} from '../../firebase';
+
+const Form = () => {
+  const [categories,setCategories]=useState('');
+  const [heading,setHeading]=useState('');
+  const [description,setDescription]=useState('');
+  const [price,setPrice]=useState('');
+  const [file,setfile]=useState('');
+  const [location,setLocation]=useState('');
+  const [name,setName]=useState('');
+  const [email,setEmail]=useState('');
+  const [phone,setPhone]=useState('');
+   
+  const submitHandler = (event) => {
+    event.preventDefault();
+    db.collection('sellcontact').add({
+      categories:categories,
+      heading:heading,
+      description:description,
+      price:price,
+      file:file,
+      location:location,
+      name:name,
+      email:email,
+      phone:phone,
+    })
+    .then(()=>{
+      alert("Your product has been published!")
+    })
+    .catch(error=>{
+      alert(error.message);
+    });
+    setCategories('');
+    setHeading('');
+    setDescription('');
+    setPrice('');
+    setfile('');
+    setLocation('');
+    setName('');
+    setEmail('');
+    setPhone('');
   };
 
   const history = useHistory();
 
   return (
-    <form onSubmit={CloseHandler}>
+    <form id="sellForm"
+    onSubmit={submitHandler}>
       <div className="form-container">
         <img
           className="close"
@@ -29,6 +68,8 @@ const Form = (props) => {
               name="categories"
               id="categories"
               required
+              value={categories}
+              onChange={(e)=>setCategories(e.target.value)}
             >
               <option value="None">Choose a category</option>
               <option value="Clothing">Clothing</option>
@@ -45,6 +86,8 @@ const Form = (props) => {
               id="heading"
               placeholder="Heading"
               required
+              value={heading}
+              onChange={(e)=>setHeading(e.target.value)}
             />
           </div>
           <div className="form__textBox">
@@ -52,31 +95,38 @@ const Form = (props) => {
             <textarea
               rows="6"
               cols="47"
+              className="form_textBox"
               name="description"
               id="description"
               placeholder="Product Description"
-              className="form_textBox"
+              value={description}
+              onChange={(e)=>setDescription(e.target.value)}
             ></textarea>
           </div>
           <div className="form__textBox">
             <label htmlFor="price"></label>
             <input
+            className="form_textBox"
               type="number"
               name="price"
               id="price"
               placeholder="Price"
-              className="form_textBox"
+              value={price}
+              onChange={(e)=>setPrice(e.target.value)}
             />
           </div>
           <div className=" upload">
             <label className="uploadPic" htmlFor="avatar">Upload a Picture </label>
             <input
+              className="form_textBox"
               type="file"
               id="avatar"
               name="avatar"
               accept="image/png, image/jpeg"
-              className="form_textBox"
-              multiple
+              // multiple
+              value={file}
+              onChange={(e)=>setfile(e.target.value)}
+
             />
           </div>
 
@@ -89,6 +139,8 @@ const Form = (props) => {
               placeholder="Location"
               className="form_textBox"
               required
+              value={location}
+              onChange={(e)=>setLocation(e.target.value)}
             />
           </div>
         </div>
@@ -98,20 +150,24 @@ const Form = (props) => {
           <div className="form__textBox">
             <label></label>
             <input
+              className="form_textBox"
               type="text"
               maxLength="25"
               placeholder="Name"
-              className="form_textBox"
+              value={name}
+              onChange={(e)=>setName(e.target.value)}
             />
           </div>
           <div className="form__textBox">
             <label></label>
             <input
+              
               type="email"
               className="email"
               placeholder="Email"
               className="form_textBox"
-              
+              value={email}
+              onChange={(e)=>setEmail(e.target.value)}
             />
           </div>
           <div className="form__textBox">
@@ -122,8 +178,10 @@ const Form = (props) => {
               name="phone"
               className="form_textBox"
               placeholder="Phone number"
-              pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+              // pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
               required
+              value={phone}
+              onChange={(e)=>setPhone(e.target.value)}
             />
           </div>
         </div>
