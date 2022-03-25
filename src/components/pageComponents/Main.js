@@ -2,6 +2,7 @@ import React from "react";
 import Home from "./home-page/Home";
 import SellProduct from "../SellProduct/SellProduct";
 import ExploreourCollection from "../exploreitems/ExploreourCollection";
+import BuyWithFirebase from "../exploreitems/BuyWithFirebase";
 import Register from "./../loginComponents/Register";
 import Reset from "./../loginComponents/Reset";
 import Dashboard from "../loginComponents/Dashboard";
@@ -15,7 +16,7 @@ const Main = (productItems, cartItems) => {
       <Switch>
         <Route path="/sellproduct" component={SellProduct} />
         <Route path="/" exact component={Home} />
-        <Route path="/exploreourcollection" component={ExploreourCollection} />
+        <Route path="/exploreourcollection" component={BuyWithFirebase} />
         <Route path="/login" component={LoginNew} />
         <Route exact path="/register" component={Register} />
         <Route exact path="/reset" component={Reset} />
