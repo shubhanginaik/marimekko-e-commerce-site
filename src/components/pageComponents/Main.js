@@ -20,7 +20,7 @@ const Main = (productItems, cartItems) => {
         <Route path="/login" component={LoginNew} />
         <Route exact path="/register" component={Register} />
         <Route exact path="/reset" component={Reset} />
-        <Route exact path="/dashboard" component={Dashboard} />
+        <Route exact path="/" component={Dashboard} />
         <Route path="/cart" exact component={Cart} exact />
         <Cart cartItems={cartItems} />
       </Switch>

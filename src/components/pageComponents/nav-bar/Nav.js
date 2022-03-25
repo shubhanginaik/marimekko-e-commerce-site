@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import { NavLink, Redirect } from "react-router-dom";
 import "./Nav.css";
@@ -12,16 +12,15 @@ import { auth, db } from "../../../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 const Nav = () => {
-  
   const [itemsInCart] = useContext(AppContext);
   const [user, loading] = useAuthState(auth);
+  const [signedOut, setSignedOut] = useState("");
+  const [disable, setDisable] = React.useState(false);
 
-  useEffect(()=>{
+  useEffect(() => {
     if (loading) return;
-     if(!user) return loading;
-  },[user,loading])
-
-  
+    if (!user) return loading;
+  }, [user, loading]);
 
   // const totalPrice = itemsInCart.map(
   //   ({ price }) => (totalPrice += parseInt(price))
@@ -30,6 +29,13 @@ const Nav = () => {
   //   (prev, cur) => prev + cur.price,
   //   0
   // );
+  const logout = (e) => {
+    console.log("signedout");
+    auth.signOut();
+    setSignedOut(true);
+    console.log(signedOut);
+    /* e.preventDefault(); */
+  };
 
   return (
     <div className="nav-bar">
@@ -46,6 +52,15 @@ const Nav = () => {
             </NavLink>
           </li>
         </ul>
+        <div>
+          {user ? (
+            <div>
+              <h2 className="userName_display">Hello {user.displayName}!</h2>
+            </div>
+          ) : (
+            ""
+          )}
+        </div>
       </nav>
 
       <NavLink to="/" exact>
@@ -63,8 +78,12 @@ const Nav = () => {
           <ReactIcon2 className="person-icon" />
         </NavLink>
       </div>
-    {user? <div>{user.displayName}</div>:''}
-     
+
+      {/* disabled={disable} onClick={() => setDisable(true)} */}
+      <button className="dashboard__btn" onClick={logout}>
+        Logout
+      </button>
+      {signedOut}
     </div>
   );
 };
