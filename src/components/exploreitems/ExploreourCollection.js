@@ -4,8 +4,9 @@ import SingleItem from "./SingleItem";
 import {Switch, Route} from "react-router";
 import ProductDetail from "./ProductDetail";
 import './explore-our-collection.css'
-
+import {db} from '../../firebase';
 class ExploreOurCollection extends Component {
+    
     state = {
         searchInput: "",
     };
@@ -18,6 +19,14 @@ class ExploreOurCollection extends Component {
 
 
     render() {
+        const fetchBlogs=async()=>{
+            const response=db.collection('sellcontact');
+            const data=await response.get();
+            console.log('items fetched',data);
+            /* data.docs.forEach(item=>{
+             setBlogs([...blogs,item.data()])
+            }) */
+        }
         const itemsFilter = items.filter((item) => {
             return item.name
                 .toLowerCase()
@@ -27,6 +36,7 @@ class ExploreOurCollection extends Component {
             <SingleItem key={item.name} {...item} />
         ));
         return (
+
             <Switch>
                 <Route  exact path={this.props.match.path}>
                     <div className="explore-our-collection">
@@ -34,6 +44,7 @@ class ExploreOurCollection extends Component {
                         <input type="text" className="search" placeholder="Search" onChange={this.searchInputHandler}></input>
                     </div>
                     <div className="product-page">
+                        {fetchBlogs}
                     {itemsListing}
                     </div>
                     </div>
