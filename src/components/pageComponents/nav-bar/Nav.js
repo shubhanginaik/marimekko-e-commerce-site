@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect } from "react";
 
 import { NavLink, Redirect } from "react-router-dom";
 import "./Nav.css";
@@ -12,8 +12,16 @@ import { auth, db } from "../../../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 const Nav = () => {
+  
   const [itemsInCart] = useContext(AppContext);
   const [user, loading] = useAuthState(auth);
+
+  useEffect(()=>{
+    if (loading) return;
+     if(!user) return loading;
+  },[user,loading])
+
+  
 
   // const totalPrice = itemsInCart.map(
   //   ({ price }) => (totalPrice += parseInt(price))
@@ -55,8 +63,8 @@ const Nav = () => {
           <ReactIcon2 className="person-icon" />
         </NavLink>
       </div>
-
-      <p className="UserName">Hello {user.displayName}!</p>
+    {user? <div>{user.displayName}</div>:''}
+     
     </div>
   );
 };
