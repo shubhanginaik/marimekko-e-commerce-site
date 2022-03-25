@@ -57,7 +57,7 @@ body {
 }
 .react-logo {
   width: 500px;
-  height: 200px;
+  height: 170px;
 }
 .nav-bar nav ul {
   list-style: none;
@@ -69,7 +69,7 @@ body {
 nav ul li a {
   display: inline-block;
 }
-.buy-product{
+.buy-product {
   margin-right: 10px;
 }
 .navbar-right {
@@ -79,12 +79,21 @@ nav ul li a {
 .person-icon {
   margin-left: 15px;
 }
+.dashboard__btn {
+  height: 60px;
+  width: 90px;
+  border-radius: 6px;
+}
+.userName_display {
+  height: 5px;
+  color: rgb(116, 151, 35);
+}
 .buy-product,
 .sell-product {
   height: 80px;
   width: 100px;
 }
-.cart{
+.cart {
   position: relative;
 }
 .items_in_cart {
@@ -97,21 +106,21 @@ nav ul li a {
   justify-content: center;
   color: white;
   position: absolute;
-  top:-0.7rem;
-  right:-0.7rem;
-  font-size:1.3rem;
+  top: -0.7rem;
+  right: -0.7rem;
+  font-size: 1.3rem;
 }
 .cart-icon,
-  .person-icon {
-    height: 60px;
-    width: 60px;
-  }
+.person-icon {
+  height: 60px;
+  width: 60px;
+}
 
 @media (max-width: 1120px) {
   .items_in_cart {
     height: 22px;
     width: 22px;
-  font-size:1rem;
+    font-size: 1rem;
   }
   .react-logo {
     width: 350px;
