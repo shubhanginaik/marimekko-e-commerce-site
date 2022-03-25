@@ -37,46 +37,44 @@ function LoginNew() {
           onClick={() => history.goBack()}
         />
         <div className="login_container">
-        <div className="login__textBox">
-          <input
-            className="login_textBox"
-            type="text"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="E-mail Address"
-          />
-          <img className="person" src={person} alt="" />
-        </div>
-        <div className="login__textBox">
-          <input
-            className="login_textBox"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Password"
-          />
-          <img className="key" src={key} alt="" />
-        </div>
+          <div className="login__textBox">
+            <input
+              className="login_textBox"
+              type="text"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="E-mail Address"
+            />
+            <img className="person" src={person} alt="" />
+          </div>
+          <div className="login__textBox">
+            <input
+              className="login_textBox"
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Password"
+            />
+            <img className="key" src={key} alt="" />
+          </div>
 
-        
-        <button
-          className="login__btn"
-          onClick={() => signInWithEmailAndPassword(email, password)}
-        >
-          <img className="login-email" src={login} alt="" />
-        </button>
+          <button
+            className="login__btn"
+            onClick={() => signInWithEmailAndPassword(email, password)}
+          >
+            <img className="login-email" src={login} alt="" />
+          </button>
 
-        <button className="login__btn" onClick={signInWithGoogle}>
-          <img className="login-gg" src={login_gg} alt="" />
-        </button>
-        
+          <button className="login__btn" onClick={signInWithGoogle}>
+            <img className="login-gg" src={login_gg} alt="" />
+          </button>
 
-        <div>
-          <Link to="/reset">Forgot Password</Link>
-        </div>
-        <div>
-          Don't have an account? <Link to="/register">Register</Link> now.
-        </div>
+          <div>
+            <Link to="/reset">Forgot Password</Link>
+          </div>
+          <div>
+            Don't have an account? <Link to="/register">Register</Link> now.
+          </div>
         </div>
       </div>
     </div>
