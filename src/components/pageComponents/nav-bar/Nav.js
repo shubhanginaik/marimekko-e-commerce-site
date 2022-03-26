@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 
-import { NavLink, Redirect } from "react-router-dom";
+import { NavLink, Redirect, NavDropdown } from "react-router-dom";
 import "./Nav.css";
 import { ReactComponent as ReactLogo } from "./logo.svg";
 import { ReactComponent as ReactIcon1 } from "./shopping-bag.svg";
@@ -15,7 +15,6 @@ const Nav = () => {
   const [itemsInCart] = useContext(AppContext);
   const [user, loading] = useAuthState(auth);
   const [signedOut, setSignedOut] = useState("");
-  const [disable, setDisable] = React.useState(false);
 
   useEffect(() => {
     if (loading) return;
@@ -52,15 +51,6 @@ const Nav = () => {
             </NavLink>
           </li>
         </ul>
-        <div>
-          {user ? (
-            <div>
-              <h2 className="userName_display">Hello {user.displayName}!</h2>
-            </div>
-          ) : (
-            ""
-          )}
-        </div>
       </nav>
 
       <NavLink to="/" exact>
@@ -79,11 +69,21 @@ const Nav = () => {
         </NavLink>
       </div>
 
-      {/* disabled={disable} onClick={() => setDisable(true)} */}
-      <button className="dashboard__btn" onClick={logout}>
-        Logout
-      </button>
-      {signedOut}
+      <div></div>
+      <div>
+        {user ? (
+          <div>
+            {
+              <button className="dashboard__btn" to="/" exact onClick={logout}>
+                Logout
+              </button>
+            }
+            <h4 className="userName_display">Hello {user.displayName}!</h4>
+          </div>
+        ) : (
+          ""
+        )}
+      </div>
     </div>
   );
 };
