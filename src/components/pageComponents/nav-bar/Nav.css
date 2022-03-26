@@ -80,8 +80,11 @@ nav ul li a {
   margin-left: 15px;
 }
 .dashboard__btn {
-  height: 60px;
-  width: 90px;
+  height: topx;
+  width: 100px;
+
+  margin-bottom: 1rem;
+  margin-left: 2rem;
   border-radius: 6px;
 }
 .userName_display {
