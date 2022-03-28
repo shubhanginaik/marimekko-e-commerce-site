@@ -78,7 +78,7 @@ const Nav = () => {
                 Logout
               </button>
             }
-            <h4 className="userName_display">Hello {user.displayName}!</h4>
+            <p className="userName_display">Hello {user.displayName}!</p>
           </div>
         ) : (
           ""
