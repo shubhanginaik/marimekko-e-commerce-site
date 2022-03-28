@@ -20,6 +20,7 @@ const Form = () => {
   const submitHandler = (event) => {
     event.preventDefault();
     db.collection('sellcontact').add({
+      id: new Date().valueOf(),
       categories:categories,
       heading:heading,
       description:description,
@@ -29,6 +30,7 @@ const Form = () => {
       name:name,
       email:email,
       phone:phone,
+      datetime: new Date(),
     })
     .then(()=>{
       alert("Your product has been published!")
