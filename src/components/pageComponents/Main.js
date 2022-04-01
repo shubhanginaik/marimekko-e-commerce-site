@@ -10,6 +10,7 @@ import Cart from "./Cart";
 import Login from "../pageComponents/Login";
 import { Switch, Route } from "react-router-dom";
 import LoginNew from "../loginComponents/LoginNew";
+import LogoutRedirect from "../loginComponents/LogoutRedirect";
 const Main = (productItems, cartItems) => {
   return (
     <div>
@@ -21,7 +22,8 @@ const Main = (productItems, cartItems) => {
         <Route exact path="/register" component={Register} />
         <Route exact path="/reset" component={Reset} />
         <Route exact path="/" component={Dashboard} />
-        <Route path="/cart" exact component={Cart} exact />
+        <Route path="/cart" exact component={Cart} />
+        <Route path="/" exact component={LogoutRedirect} />
         <Cart cartItems={cartItems} />
       </Switch>
     </div>
