@@ -30,7 +30,28 @@ const Home = () => {
   //changed
   const [user, loading] = useAuthState(auth);
   const [name, setName] = useState("");
+  const [products,setProducts]=useState([]);
+  
+  const [isLoading, setIsLoading] = useState(true);
+
+  const fetchProducts=async()=>{
+    const response=await db.collection('sellcontact');
+    response.onSnapshot((querySnapShot) => {
+        const saveFirebaseProducts = [];
+        querySnapShot.forEach((doc) => {
+            saveFirebaseProducts.push(doc.data());
+        });
+    setProducts(saveFirebaseProducts);
+    setIsLoading(false);
+    
+}) 
+}
+useEffect(() => {
+    fetchProducts();
+    
+  }, []);
   const history = useHistory();
+  
   const fetchUserName = async () => {
     try {
       const query = await db
@@ -50,7 +71,9 @@ const Home = () => {
     fetchUserName();
   }, [user, loading]);
   //till here
-  const itemsListing = items.map((item) => <SingleItem key={item.name} {...item} />);
+  
+  const recentList=products.slice(0,3);
+  const itemsListing = recentList.map((item) => <SingleItem key={item.id} {...item} />);
   return (
     <div>
      
@@ -81,10 +104,12 @@ const Home = () => {
         </div> 
  
         <div className="explore-collection">
+        {!isLoading &&
+           products &&
           <div className="topPicksProduct">
        {itemsListing}
       
-       </div>
+       </div>}
           <NavLink to="/exploreourcollection">
             <img className="exploreCollection" src={exploreCollection} alt="explore-collection"/>
           </NavLink>

@@ -5,8 +5,11 @@ import sellerInfo from "./SellerInfo.svg";
 import close from "./close.svg";
 
 import {db} from '../../firebase';
+import {storage} from '../../firebase';
 
 const Form = () => {
+
+
   const [categories,setCategories]=useState('');
   const [heading,setHeading]=useState('');
   const [description,setDescription]=useState('');
@@ -16,29 +19,39 @@ const Form = () => {
   const [name,setName]=useState('');
   const [email,setEmail]=useState('');
   const [phone,setPhone]=useState('');
-   
+  const [url, setURL] = useState("");
+  
   const submitHandler = (event) => {
     event.preventDefault();
-    db.collection('sellcontact').add({
-      id: new Date().valueOf(),
-      categories:categories,
-      heading:heading,
-      description:description,
-      price:price,
-      file:file,
-      location:location,
-      name:name,
-      email:email,
-      phone:phone,
-      datetime: new Date(),
-    })
-    .then(()=>{
-      alert("Your product has been published!")
-    })
-    .catch(error=>{
-      alert(error.message);
-    });
-    setCategories('');
+    const ref =  storage.ref(`/images/${file.name}`);
+    const uploadTask =  ref.put(file);
+    uploadTask.on("state_changed", console.log, console.error, () => {
+       ref
+        .getDownloadURL()
+        .then((url) => {
+          setfile(null);
+          setURL(url);
+          console.log('url is',url);
+          db.collection('sellcontact').add({
+            id: new Date().valueOf(),
+            categories:categories,
+            heading:heading,
+            description:description,
+            price:price,
+            file:url,
+            location:location,
+            name:name,
+            email:email,
+            phone:phone,
+            datetime: new Date()
+          })
+          .then(()=>{
+            alert("Your product has been published!")
+          })
+          .catch(error=>{
+            alert(error.message);
+          });
+          setCategories('');
     setHeading('');
     setDescription('');
     setPrice('');
@@ -47,11 +60,19 @@ const Form = () => {
     setName('');
     setEmail('');
     setPhone('');
+        });
+    });
+    
+   
+    
+    
   };
-
+  
   const history = useHistory();
+  
 
   return (
+   
     <form id="sellForm"
     onSubmit={submitHandler}>
       <div className="form-container">
@@ -124,10 +145,10 @@ const Form = () => {
               type="file"
               id="avatar"
               name="avatar"
-              accept="image/png, image/jpeg"
+              //accept="image/png, image/jpeg"
               // multiple
-              value={file}
-              onChange={(e)=>setfile(e.target.value)}
+              //value={file}
+              onChange={(e)=>setfile(e.target.files[0])} 
 
             />
           </div>
@@ -189,10 +210,11 @@ const Form = () => {
         </div>
 
         <div className="button">
-          <input type="submit" value="Publish" className="submit" />
+          <input disabled={!file} type="submit" value="Publish" className="submit" />
         </div>
       </div>
     </form>
+     
   );
 };
 
