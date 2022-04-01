@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import { AppContext } from "../../Context";
 import trash from "./trash.svg";
-import findMore from "./Find-more-items.svg"
+import findMore from "./Find-more-items.svg";
 import "././Cart.css";
 import { items } from "../exploreitems/clothesdata";
-import { useParams, useHistory } from "react-router";
+import { useHistory } from "react-router";
 
 const Cart = () => {
   const [itemsInCart, setItemsInCart] = useContext(AppContext);
@@ -39,16 +39,20 @@ const Cart = () => {
                       <div className="product-info">
                         <h3 className="product-name">{name}</h3>
                         <div className="price-trash">
-                        <h2 className="product-price">{price}</h2>
+                          <h2 className="product-price">{price}</h2>
 
-                        <button
-                          className="product_remove"
-                          type="button"
-                          onClick={() => removeItemHandle(name)}
-                        >
-                          {" "}
-                          <img className="trush_icon"  src={trash} alt="trash-button"/>{" "}
-                        </button>
+                          <button
+                            className="product_remove"
+                            type="button"
+                            onClick={() => removeItemHandle(name)}
+                          >
+                            {" "}
+                            <img
+                              className="trush_icon"
+                              src={trash}
+                              alt="trash-button"
+                            />{" "}
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -57,16 +61,16 @@ const Cart = () => {
               </div>
             );
           })}
-          
-          <div className="continue-total">
-          <div className="cart_total"> Total Price: {totalPrice}€</div>
 
-          <button
-            className="back_shopping_btn"
-            onClick={() => history.goBack("/")}
-          >
-            <img className="find-more"  src={findMore} alt="findMore-button"/>
-          </button>
+          <div className="continue-total">
+            <div className="cart_total"> Total Price: {totalPrice}€</div>
+
+            <button
+              className="back_shopping_btn"
+              onClick={() => history.goBack("/")}
+            >
+              <img className="find-more" src={findMore} alt="findMore-button" />
+            </button>
           </div>
         </>
       )}
