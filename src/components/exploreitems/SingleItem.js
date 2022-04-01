@@ -12,7 +12,8 @@ const SingleItem = (props) => {
       <div className="itemsCard">
         <Link to={`${match.url}/${props.id}`}>
           <h2>{props.heading}</h2>
-          <img src={props.file} alt="product_picture" />
+
+          <img src={props.file} alt="product_picture" /> 
           <p className="price">{props.price}</p>
         </Link>
         <button
