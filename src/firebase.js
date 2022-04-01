@@ -12,6 +12,7 @@ const app = firebase.initializeApp(firebaseConfig);
 const auth = app.auth();
 const db = app.firestore();
 
+
 //google authentication function
 ////make a function for signing in using an email and password
 /*Then we are querying the database to check if this user is registered in our database with the user uid. And if there is no user with the uid, which also means that the user is new to our app, we make a new record in our database with additional data for future reference.*/
@@ -83,7 +84,12 @@ const logout = () => {
   console.log("signedout");
   auth.signOut();
 };
+const storage = firebase.storage();
 
+
+export const ref=firebase.ref;
+export const uploadBytesResumable=firebase.uploadBytesResumable;
+export const getDownloadURL=firebase.getDownloadURL;
 export {
   auth,
   db,
@@ -92,4 +98,5 @@ export {
   registerWithEmailAndPassword,
   sendPasswordResetEmail,
   logout,
+  storage
 };

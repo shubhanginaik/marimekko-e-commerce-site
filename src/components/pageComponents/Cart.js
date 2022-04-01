@@ -8,6 +8,7 @@ import { useHistory } from "react-router";
 
 const Cart = () => {
   const [itemsInCart, setItemsInCart] = useContext(AppContext);
+  console.log(itemsInCart);
   let totalPrice = 0;
   let history = useHistory();
   const removeItemHandle = (name) => {
@@ -23,7 +24,7 @@ const Cart = () => {
         <h1 className="empty_cart_msg">"No items in the cart!"</h1>
       ) : (
         <>
-          {itemsInCart.map(({ name, image, price, id }) => {
+          {itemsInCart.map(({ name, file, price, id }) => {
             totalPrice += parseInt(price);
             return (
               <div className="container">
@@ -33,7 +34,7 @@ const Cart = () => {
                     <div className="product">
                       <img
                         className="thumbnail"
-                        src={`/images/${name}.png`}
+                        src={file}
                         alt="a product_picture"
                       />
                       <div className="product-info">

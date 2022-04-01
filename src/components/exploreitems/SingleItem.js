@@ -10,8 +10,8 @@ const SingleItem = (props) => {
   return (
     <div className="items-wrapper">
       <div className="itemsCard">
-        <Link to={`${match.url}/${props.name}`}>
-          <h2>{props.name}</h2>
+        <Link to={`${match.url}/${props.id}`}>
+          <h2>{props.heading}</h2>
           <img src={props.file} alt="product_picture" />
           <p className="price">{props.price}</p>
         </Link>
