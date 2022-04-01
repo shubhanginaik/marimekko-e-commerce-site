@@ -1,175 +1,9 @@
-/*********Shubhangi Naik*********/
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-/* 
-:root {
-  --border-radius: 5px;
-}
-.sellProduct {
-  font-family: "Roboto", sans-serif;
-}
-form {
-  border: 1px solid gray;
-  width: 80%;
-  height: 1200px;
-  margin-left: 10%;
-  padding-top: 40px;
-  padding-left: 200px;
-  border-radius: var(--border-radius);
-  box-shadow: 0 2px 0 1px rgb(94, 160, 56);
-}
-form h1 {
-  margin-top: 30px;
-  margin-bottom: 60px;
-  text-align: center;
-  color: #4b0082;
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
-  text-shadow: 1px 1px rgb(133, 74, 74);
-}
-h2 {
-  text-align: center;
-  font-family: sans-serif;
-  margin: 20px;
-}
-form div {
-  margin-bottom: 35px;
-}
-form input[type="text"],
-input[type="number"],
-input[type="tel"],
-input[type="email"] {
-  margin-left: 140px;
-  width: 400px;
-  height: 50px;
-  font-family: "Raleway" sans-serif;
-  padding-left: 10px;
-  font-size: 1rem;
-  border-radius: var(--border-radius);
-  box-shadow: 0 1px 0 1px rgba(133, 74, 74, 0.1);
-  cursor: text;
-}
-.size {
-  margin-right: 350px;
-  width: 200px;
-}
-form input[type="file"] {
-  float: right;
-  width: 320px;
-  margin-left: 100px;
-  font-size: 1.5rem;
-}
-form select {
-  display: block;
-  width: 400px;
-  height: 50px;
-  font-family: "Raleway" sans-serif;
-  padding-left: 10px;
-  font-size: 1.4rem;
-  border-radius: var(--border-radius);
-  background-color: white;
-  cursor: pointer;
-  border: 1px solid #aaa;
-  box-shadow: 0 1px 0 1px rgba(133, 74, 74, 0.1);
-}
-.size .categories:focus {
-  border-color: #aaa;
- 
-  box-shadow: 0 0 1px 3px rgba(59, 59, 59, 0.7);
-  box-shadow: 0 0 0 3px -moz-mac-focusring;
-  color: #222;
-  outline: none;
-}
-.size::-ms-expand {
-  display: none;
-}
-form label {
-  font-size: 1.55rem;
-}
-form span {
-  font-size: 1.4rem;
-}
-.product_description input {
-  cursor: text;
-}
-.phone {
-  margin-top: -20px;
-}
-.picture {
-  margin-top: 40px;
-  margin-bottom: 30px;
-}
-.price {
-  margin-top: 80px;
-}
-.email {
-  background-color: rgb(243, 240, 240);
-}
-form [type="submit"] {
-  border-radius: var(--border-radius);
-  width: 200px;
-  height: 50px;
-  font-size: 1.5rem;
-  background-color: #4b0082;
-  color: white;
-  cursor: pointer;
-  margin-top: 30px;
-}
-form label {
-  align-items: left;
-}
-form input,
-select,
-textarea {
-  float: right;
-  margin-right: 50px;
-}
-form [type="submit"] {
-  margin-right: 50px;
-}
-div {
-  padding: 10px;
-}
-form [type="submit"]:hover {
-  background-color: #9840d6;
-}
-@media screen and (max-width: 600px) {
-  input,
-  label,
-  input[type="submit"] {
-    width: 100%;
-    margin-top: 0;
-    font-size: 60%;
-  }
-  label {
-    float: left;
-    padding-left: 0;
-    margin-left: 0;
-    font-size: 1rem;
-  }
-  form {
-    height: auto;
-    overflow: hidden;
-  }
-  form input[type="text"],
-  input[type="number"],
-  input[type="tel"],
-  input[type="email"] {
-    margin-left: 0;
-    width: 70%;
-    height: 70%;
-    font-size: 0.7rem;
-    border-radius: var(--border-radius);
-    box-shadow: 0 1px 0 1px rgba(133, 74, 74, 0.1);
-    cursor: text;
-  }
-} */
 
-/* Trang Nguyen */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 
 form {
@@ -347,5 +181,8 @@ form textarea {
     width: 4rem;
     height: 1.5rem;
     font-size: x-small;
+  }
+  .disabled_submit{
+    background: darkblue;
   }
 }
