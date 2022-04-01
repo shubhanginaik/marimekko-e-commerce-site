@@ -48,7 +48,7 @@ const ProductDetail = () => {
             <div className="product-detail-right">
                 <div className="product-header">
                     <div className="product-name-single">
-                        <p className="product-header-row">product</p>
+                        <p className="product-header-row">{itemsFilter[0].heading}</p>
                     </div>
                     <div className="product-price-single">
                         <p>{itemsFilter[0].price}</p>
