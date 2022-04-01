@@ -21,6 +21,7 @@ const Form = () => {
   const [phone,setPhone]=useState('');
   const [url, setURL] = useState("");
   
+  
   const submitHandler = (event) => {
     event.preventDefault();
     const ref =  storage.ref(`/images/${file.name}`);
@@ -52,25 +53,20 @@ const Form = () => {
             alert(error.message);
           });
           setCategories('');
-    setHeading('');
-    setDescription('');
-    setPrice('');
-    setfile('');
-    setLocation('');
-    setName('');
-    setEmail('');
-    setPhone('');
+          setHeading('');
+          setDescription('');
+          setPrice('');
+          setfile('');
+          setLocation('');
+          setName('');
+          setEmail('');
+          setPhone('');
         });
     });
-    
-   
-    
-    
   };
   
   const history = useHistory();
   
-
   return (
    
     <form id="sellForm"
@@ -97,6 +93,7 @@ const Form = () => {
               <option value="None">Choose a category</option>
               <option value="Clothing">Clothing</option>
               <option value="Bags">Bags</option>
+              <option value="Home accessories">Home accessories</option>
               <option value="Other">Other</option>
             </select>
           </div>
@@ -201,7 +198,7 @@ const Form = () => {
               name="phone"
               className="form_textBox"
               placeholder="Phone number"
-              // pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+              pattern="[0-9]{10}"
               required
               value={phone}
               onChange={(e)=>setPhone(e.target.value)}
@@ -210,7 +207,8 @@ const Form = () => {
         </div>
 
         <div className="button">
-          <input disabled={!file} type="submit" value="Publish" className="submit" />
+          <input disabled={!file} type="submit" value="Publish" 
+          className="submit" />
         </div>
       </div>
     </form>
