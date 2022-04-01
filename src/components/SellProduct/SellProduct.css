@@ -93,7 +93,6 @@ input[type="submit"] {
   text-transform: uppercase;
   border-radius: 5px;
   font-weight: bold;
-  background: #749723;
   color: white;
   padding: 0;
 }
@@ -123,7 +122,13 @@ input::placeholder, textarea::placeholder{
 form textarea {
   padding-top: 0.5rem;
 }
-
+.submit{
+  background: #749723;
+  cursor: pointer;
+}
+.disabled_submit{
+  background: #82925e;
+}
 
 
 @media screen and (max-width: 980px) {
@@ -181,8 +186,5 @@ form textarea {
     width: 4rem;
     height: 1.5rem;
     font-size: x-small;
-  }
-  .disabled_submit{
-    background: darkblue;
   }
 }

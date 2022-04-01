@@ -208,7 +208,7 @@ const Form = () => {
 
         <div className="button">
           <input disabled={!file} type="submit" value="Publish" 
-          className="submit" />
+          className={file ? "submit" : "disabled_submit"} />
         </div>
       </div>
     </form>
