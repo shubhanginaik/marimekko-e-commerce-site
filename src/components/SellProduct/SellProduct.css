@@ -93,7 +93,6 @@ input[type="submit"] {
   text-transform: uppercase;
   border-radius: 5px;
   font-weight: bold;
-  background: #749723;
   color: white;
   padding: 0;
 }
@@ -182,7 +181,11 @@ form textarea {
     height: 1.5rem;
     font-size: x-small;
   }
-  .disabled_submit{
-    background: darkblue;
-  }
+}
+.submit{
+  background: #749723;
+  cursor: pointer;
+}
+.disabled_submit{
+  background: #82925e;
 }
