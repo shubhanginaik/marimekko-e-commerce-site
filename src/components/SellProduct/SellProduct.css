@@ -122,7 +122,13 @@ input::placeholder, textarea::placeholder{
 form textarea {
   padding-top: 0.5rem;
 }
-
+.submit{
+  background: #749723;
+  cursor: pointer;
+}
+.disabled_submit{
+  background: #82925e;
+}
 
 
 @media screen and (max-width: 980px) {
@@ -181,11 +187,4 @@ form textarea {
     height: 1.5rem;
     font-size: x-small;
   }
-}
-.submit{
-  background: #749723;
-  cursor: pointer;
-}
-.disabled_submit{
-  background: #82925e;
 }
