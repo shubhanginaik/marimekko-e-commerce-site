@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
+.submit {
+  background: #749723;
+  cursor: pointer;
+  width: 8rem;
+  font-size: 1.5rem;
+  margin: 1rem;
+  padding: 0.75rem;
+  color: white;
+  font-family: inherit;
+}
+@media screen and (max-width: 490px) {
+  .submit,
+  .preview {
+    width: 6rem;
+    height: 1.5rem;
+    font-size: 3rem;
+  }
+}
