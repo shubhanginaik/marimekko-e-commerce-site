@@ -1,11 +1,11 @@
 import React from "react";
 import "./Home.css";
-
+import {Switch, Route} from "react-router";
 import SingleItem from "../../exploreitems/SingleItem";
 import {items}  from "./topPicks";
 
 import { NavLink, Link } from "react-router-dom";
-
+import {useRouteMatch}from "react-router-dom";
 import heroBannerLeft from "./hero-banner-left.svg";
 import heroBannerRight from "./hero-banner-right.svg";
 
@@ -17,7 +17,7 @@ import topPicks from "./topPicks.svg";
 
 import exploreCollection from "./explore-our-collection.svg";
 import JoinButton from "./join-us-btn.svg";
-
+import ProductDetail from "../../exploreitems/ProductDetail"
 
 //changed
 import { useEffect, useState } from "react";
@@ -33,7 +33,7 @@ const Home = () => {
   const [products,setProducts]=useState([]);
   
   const [isLoading, setIsLoading] = useState(true);
-
+  const match = useRouteMatch();
   const fetchProducts=async()=>{
     const response=await db.collection('sellcontact');
     response.onSnapshot((querySnapShot) => {
@@ -102,18 +102,25 @@ useEffect(() => {
         <div className="cards">
           
         </div> 
- 
+        <Switch>
+        <Route  exact path={`${match.path}`}>
         <div className="explore-collection">
-        {!isLoading &&
-           products &&
+        
           <div className="topPicksProduct">
        {itemsListing}
       
-       </div>}
+       </div>
+       </div>
+       </Route>
+                <Route path={`${match.path}/:id`}>
+                    <ProductDetail/>
+                </Route>
+            </Switch>
+           
           <NavLink to="/exploreourcollection">
             <img className="exploreCollection" src={exploreCollection} alt="explore-collection"/>
           </NavLink>
-        </div>
+       
       </div>
     </div>
   );
