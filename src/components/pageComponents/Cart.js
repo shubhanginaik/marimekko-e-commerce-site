@@ -10,8 +10,8 @@ const Cart = () => {
   console.log(itemsInCart);
   let totalPrice = 0;
   let history = useHistory();
-  const removeItemHandle = (name) => {
-    const newList = itemsInCart.filter((item) => item.name !== name);
+  const removeItemHandle = (id) => {
+    const newList = itemsInCart.filter((item) => item.id !== id);
 
     setItemsInCart(newList);
   };
@@ -44,7 +44,7 @@ const Cart = () => {
                           <button
                             className="product_remove"
                             type="button"
-                            onClick={() => removeItemHandle(name)}
+                            onClick={() => removeItemHandle(id)}
                           >
                             {" "}
                             <img
