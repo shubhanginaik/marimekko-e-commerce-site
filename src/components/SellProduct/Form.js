@@ -3,8 +3,8 @@ import { useHistory } from "react-router-dom";
 import PublishPost from "./Publish your post.svg";
 import sellerInfo from "./SellerInfo.svg";
 import close from "./close.svg";
-
-import { db } from "../../firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth,db } from "../../firebase";
 import { storage } from "../../firebase";
 
 const Form = () => {
@@ -18,11 +18,13 @@ const Form = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [url, setURL] = useState("");
+  const [user, loading] = useAuthState(auth);
 
   const submitHandler = (event) => {
     event.preventDefault();
     const ref = storage.ref(`/images/${file.name}`);
     const uploadTask = ref.put(file);
+    if(user){
     uploadTask.on("state_changed", console.log, console.error, () => {
       ref.getDownloadURL().then((url) => {
         setfile(null);
@@ -59,6 +61,10 @@ const Form = () => {
         setPhone("");
       });
     });
+  } else {
+    alert("Check you are logged in!");
+    return loading;
+  }
   };
 
   const history = useHistory();
