@@ -1,62 +1,62 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .items-wrapper {
-    display: inline-block;
-    flex-wrap: wrap;
-    padding: 0 2rem;
-    flex-direction: column;
-    /* margin-left: 80px; */
+  display: inline-block;
+  flex-wrap: wrap;
+  padding: 0 2rem;
+  flex-direction: column;
+  /* margin-left: 80px; */
 }
 .itemsCard {
-    /*  display: inline-block; */
-    box-shadow: 0 0 5px #9BBF7F;
-    transition: all 0.5s;
-    text-transform: capitalize;
-    margin: 0.55rem;
-    padding: 0.5rem;
-    border-width: 2px;
-    border-style: solid;
-    border-radius: 5%;
-    width: 340px;
-    height: 500px;
-    position: relative;
+  /*  display: inline-block; */
+  box-shadow: 0 0 5px #9bbf7f;
+  transition: all 0.5s;
+  text-transform: capitalize;
+  margin: 0.55rem;
+  padding: 0.5rem;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 5%;
+  width: 340px;
+  height: 500px;
+  position: relative;
 }
 
 .itemsCard h2,
 link {
-    text-align: center;
+  text-align: center;
 }
 
 .itemsCard img {
-    align-content: center;
-    max-width: 320px;
-    max-height: 300px;
-    align-self: center;
-    object-fit: cover;
-    margin-bottom: 20px;
-    position: absolute;
+  align-content: center;
+  max-width: 320px;
+  max-height: 300px;
+  align-self: center;
+  object-fit: cover;
+  margin-bottom: 20px;
+  position: absolute;
 }
 
 .price {
-    padding-top: 40px;
-    position: absolute;
-    padding-left: 200px;
-    margin-top: 320px;
+  padding-top: 40px;
+  position: absolute;
+  padding-left: 200px;
+  margin-top: 320px;
 }
 
 .itemsCard:hover {
-    box-shadow: 0 0 20px rgb(121, 121, 121);
-    cursor: pointer;
+  box-shadow: 0 0 20px rgb(121, 121, 121);
+  cursor: pointer;
 }
 body {
-    background-color: white;
-    font-family: "Roboto", sans-serif;
+  background-color: white;
+  font-family: "Roboto", sans-serif;
 }
 /*.searchbutton {
     padding: 2rem;
@@ -77,77 +77,77 @@ body {
 }*/
 
 .singleProduct {
-    padding: 2rem;
-    text-align: center;
-    align-content: center;
-    justify-items: center;
-    justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
 }
 .singleinfo img {
-    width: 30vw;
-    height: 30vh;
-    align-content: center;
-    margin: 1rem;
+  width: 30vw;
+  height: 30vh;
+  align-content: center;
+  margin: 1rem;
 }
 
 .add_cart_btn {
-    background-color: #749723;
-    font-family: "Oswald", sans-serif;
-    color: lavenderblush;
-    margin-top: 350px;
-    margin-right: 30px;
-    margin-left: 20px;
-    align-content: center;
-    justify-content: center;
-    border-radius: 5%;
-    position: absolute;
-    padding: 10px;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-border-radius: 3px;
-font-weight: bolder;
-cursor: pointer;
+  background-color: #749723;
+  font-family: "Oswald", sans-serif;
+  color: lavenderblush;
+  margin-top: 350px;
+  margin-right: 30px;
+  margin-left: 20px;
+  align-content: center;
+  justify-content: center;
+  border-radius: 5%;
+  position: absolute;
+  padding: 10px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  border: none;
+  font-weight: bolder;
+  cursor: pointer;
 }
 
 .para {
-    padding: 0.5rem;
-    margin: 0.25rem;
-    font-family: "Oswald", sans-serif;
-    font-size: 2rem;
+  padding: 0.5rem;
+  margin: 0.25rem;
+  font-family: "Oswald", sans-serif;
+  font-size: 2rem;
 }
 nav ul {
-    list-style-type: none;
-    display: block;
-    font-size: 2rem;
+  list-style-type: none;
+  display: block;
+  font-size: 2rem;
 
-    margin: 0.5rem;
-    background-color: azure;
+  margin: 0.5rem;
+  background-color: azure;
 }
 .imgdes img {
-    float: left;
+  float: left;
 }
 .imgdes p {
-    float: right;
-    font-size: 2rem;
-    font-family: "Oswald", sans-serif;
-    padding: 1rem;
-    margin: 0.5rem;
+  float: right;
+  font-size: 2rem;
+  font-family: "Oswald", sans-serif;
+  padding: 1rem;
+  margin: 0.5rem;
 }
 .search {
-    width: 400px;
-    height: 50px;
-    border-radius: 5px;
-    border: 2px solid #749723;
-    margin: 2rem 0;
+  width: 400px;
+  height: 50px;
+  border-radius: 5px;
+  border: 2px solid #749723;
+  margin: 2rem 0;
 }
 .itemsCard a {
-   color: black;
-   font-family: "Roboto", sans-serif;
-    text-decoration: none; 
-
+  color: black;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
 }
 
 .itemsCard a img {
-    padding: 1rem;
+  padding: 1rem;
 }
 /* .search {
     display: flex;

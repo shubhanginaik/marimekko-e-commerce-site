@@ -83,10 +83,12 @@ nav ul li a {
 .userName_display {
   color: rgb(116, 151, 35);
 }
-.dashboard__log,
-.dashboard__MyAds {
-  text-decoration: none;
-  paddings-top: 2rem;
+.dashboard__log {
+}
+
+.userName_display {
+  font-size: 17px;
+  font-weight: bold;
 }
 .dashboard__log: shover {
   color: hotpink;
@@ -120,6 +122,21 @@ nav ul li a {
   height: 60px;
   width: 60px;
 }
+.dashboard__log {
+  height: 30px;
+  width: 80px;
+  border-radius: 6px;
+  background: orange;
+  font-size: 17px;
+  color: white;
+  border: none;
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+.dashboard__MyAds {
+  color: black;
+  font-size: 20px;
+}
 
 @media (max-width: 1120px) {
   .items_in_cart {
@@ -135,6 +152,11 @@ nav ul li a {
   .sell-product {
     height: 50px;
     width: 70px;
+  }
+  .dashboard__log {
+    height: 15px;
+    width: 50px;
+    font-size: 12px;
   }
   .cart-icon,
   .person-icon {
@@ -158,8 +180,12 @@ nav ul li a {
     width: 60px;
   }
   .dashboard__btn {
-    height: 25px;
-    width: 25px;
+    height: 30px;
+    width: 30px;
+    font-size: 12px;
+  }
+  .dashboard__MyAds {
+    font-size: 12px;
   }
 
   nav ul li a {
