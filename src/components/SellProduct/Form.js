@@ -4,73 +4,67 @@ import PublishPost from "./Publish your post.svg";
 import sellerInfo from "./SellerInfo.svg";
 import close from "./close.svg";
 
-import {db} from '../../firebase';
-import {storage} from '../../firebase';
+import { db } from "../../firebase";
+import { storage } from "../../firebase";
 
 const Form = () => {
-
-
-  const [categories,setCategories]=useState('');
-  const [heading,setHeading]=useState('');
-  const [description,setDescription]=useState('');
-  const [price,setPrice]=useState('');
-  const [file,setfile]=useState('');
-  const [location,setLocation]=useState('');
-  const [name,setName]=useState('');
-  const [email,setEmail]=useState('');
-  const [phone,setPhone]=useState('');
+  const [categories, setCategories] = useState("");
+  const [heading, setHeading] = useState("");
+  const [description, setDescription] = useState("");
+  const [price, setPrice] = useState("");
+  const [file, setfile] = useState("");
+  const [location, setLocation] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [url, setURL] = useState("");
-  
-  
+
   const submitHandler = (event) => {
     event.preventDefault();
-    const ref =  storage.ref(`/images/${file.name}`);
-    const uploadTask =  ref.put(file);
+    const ref = storage.ref(`/images/${file.name}`);
+    const uploadTask = ref.put(file);
     uploadTask.on("state_changed", console.log, console.error, () => {
-       ref
-        .getDownloadURL()
-        .then((url) => {
-          setfile(null);
-          setURL(url);
-          console.log('url is',url);
-          db.collection('sellcontact').add({
+      ref.getDownloadURL().then((url) => {
+        setfile(null);
+        setURL(url);
+        console.log("url is", url);
+        db.collection("sellcontact")
+          .add({
             id: new Date().valueOf(),
-            categories:categories,
-            heading:heading,
-            description:description,
-            price:price,
-            file:url,
-            location:location,
-            name:name,
-            email:email,
-            phone:phone,
-            datetime: new Date()
+            categories: categories,
+            heading: heading,
+            description: description,
+            price: price,
+            file: url,
+            location: location,
+            name: name,
+            email: email,
+            phone: phone,
+            datetime: new Date(),
           })
-          .then(()=>{
-            alert("Your product has been published!")
+          .then(() => {
+            alert("Your product has been published!");
           })
-          .catch(error=>{
+          .catch((error) => {
             alert(error.message);
           });
-          setCategories('');
-          setHeading('');
-          setDescription('');
-          setPrice('');
-          setfile('');
-          setLocation('');
-          setName('');
-          setEmail('');
-          setPhone('');
-        });
+        setCategories("");
+        setHeading("");
+        setDescription("");
+        setPrice("");
+        setfile("");
+        setLocation("");
+        setName("");
+        setEmail("");
+        setPhone("");
+      });
     });
   };
-  
+
   const history = useHistory();
-  
+
   return (
-   
-    <form id="sellForm"
-    onSubmit={submitHandler}>
+    <form id="sellForm" onSubmit={submitHandler}>
       <div className="form-container">
         <img
           className="close"
@@ -88,7 +82,7 @@ const Form = () => {
               id="categories"
               required
               value={categories}
-              onChange={(e)=>setCategories(e.target.value)}
+              onChange={(e) => setCategories(e.target.value)}
             >
               <option value="None">Choose a category</option>
               <option value="Clothing">Clothing</option>
@@ -107,7 +101,7 @@ const Form = () => {
               placeholder="Heading"
               required
               value={heading}
-              onChange={(e)=>setHeading(e.target.value)}
+              onChange={(e) => setHeading(e.target.value)}
             />
           </div>
           <div className="form__textBox">
@@ -120,23 +114,25 @@ const Form = () => {
               id="description"
               placeholder="Product Description"
               value={description}
-              onChange={(e)=>setDescription(e.target.value)}
+              onChange={(e) => setDescription(e.target.value)}
             ></textarea>
           </div>
           <div className="form__textBox">
             <label htmlFor="price"></label>
             <input
-            className="form_textBox"
+              className="form_textBox"
               type="number"
               name="price"
               id="price"
               placeholder="Price"
               value={price}
-              onChange={(e)=>setPrice(e.target.value)}
+              onChange={(e) => setPrice(e.target.value)}
             />
           </div>
           <div className=" upload">
-            <label className="uploadPic" htmlFor="avatar">Upload a Picture </label>
+            <label className="uploadPic" htmlFor="avatar">
+              Upload a Picture{" "}
+            </label>
             <input
               className="form_textBox"
               type="file"
@@ -145,8 +141,7 @@ const Form = () => {
               //accept="image/png, image/jpeg"
               // multiple
               //value={file}
-              onChange={(e)=>setfile(e.target.files[0])} 
-
+              onChange={(e) => setfile(e.target.files[0])}
             />
           </div>
 
@@ -160,7 +155,7 @@ const Form = () => {
               className="form_textBox"
               required
               value={location}
-              onChange={(e)=>setLocation(e.target.value)}
+              onChange={(e) => setLocation(e.target.value)}
             />
           </div>
         </div>
@@ -175,19 +170,18 @@ const Form = () => {
               maxLength="25"
               placeholder="Name"
               value={name}
-              onChange={(e)=>setName(e.target.value)}
+              onChange={(e) => setName(e.target.value)}
             />
           </div>
           <div className="form__textBox">
             <label></label>
             <input
-              
               type="email"
               className="email"
               placeholder="Email"
               className="form_textBox"
               value={email}
-              onChange={(e)=>setEmail(e.target.value)}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className="form__textBox">
@@ -201,18 +195,21 @@ const Form = () => {
               pattern="[0-9]{10}"
               required
               value={phone}
-              onChange={(e)=>setPhone(e.target.value)}
+              onChange={(e) => setPhone(e.target.value)}
             />
           </div>
         </div>
 
         <div className="button">
-          <input disabled={!file} type="submit" value="Publish" 
-          className={file ? "submit" : "disabled_submit"} />
+          <input
+            disabled={!file}
+            type="submit"
+            value="Publish"
+            className={file ? "submit" : "disabled_submit"}
+          />
         </div>
       </div>
     </form>
-     
   );
 };
 
