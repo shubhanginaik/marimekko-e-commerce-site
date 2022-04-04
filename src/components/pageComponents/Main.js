@@ -1,13 +1,10 @@
 import React from "react";
 import Home from "./home-page/Home";
 import SellProduct from "../SellProduct/SellProduct";
-import ExploreourCollection from "../exploreitems/ExploreourCollection";
-import BuyWithFirebase from "../exploreitems/BuyWithFirebase";
 import Register from "./../loginComponents/Register";
 import Reset from "./../loginComponents/Reset";
 import Dashboard from "../loginComponents/Dashboard";
 import Cart from "./Cart";
-import Login from "../pageComponents/Login";
 import { Switch, Route } from "react-router-dom";
 import LoginNew from "../loginComponents/LoginNew";
 import LogoutRedirect from "../loginComponents/LogoutRedirect";
