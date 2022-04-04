@@ -5,17 +5,11 @@ import "./SellProduct.css";
 import { auth } from "../../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 
-// class SellProduct extends Component {
-//   state = {
-//     showHome: false,
-//   };
-const SellProduct = () => {
+  const SellProduct = () => {
   const [showHome, setShowHome] = useState(false);
   const [user, setUser] = useAuthState(auth);
 
   console.log(user);
-  // console.log(user.displayName)
-  // console.log(user.email)
   const submitHandler = (event) => {
     event.preventDefault();
     setShowHome(true);
