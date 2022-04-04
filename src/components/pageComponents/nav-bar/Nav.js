@@ -73,7 +73,7 @@ const Nav = () => {
       <div>
         {user ? (
           <div>
-            <p className="userName_display">Hi {user.displayName}!</p>
+            <p className="userName_display">{user.displayName}</p>
             {
               <button
                 className="dashboard__log"
