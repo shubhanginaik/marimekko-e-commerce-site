@@ -1,6 +1,6 @@
 import React from "react";
 
-import { auth, db, logout } from "../../../firebase";
+import { auth, db } from "../../../firebase";
 import SingleItem from "../../exploreitems/SingleItem";
 import { useState, useEffect } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";

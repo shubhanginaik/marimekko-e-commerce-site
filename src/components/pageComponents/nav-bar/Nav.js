@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 
-import { NavLink, Redirect, NavDropdown } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Nav.css";
 import { ReactComponent as ReactLogo } from "./logo.svg";
 import { ReactComponent as ReactIcon1 } from "./shopping-bag.svg";
@@ -8,16 +8,13 @@ import { ReactComponent as ReactIcon2 } from "./icons_person.svg";
 import { ReactComponent as ReactIcon3 } from "./sell-btn.svg";
 import { ReactComponent as ReactIcon4 } from "./buy-btn.svg";
 import { AppContext } from "../../../Context";
-import { auth, db } from "../../../firebase";
+import { auth } from "../../../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
-import MyAds from "./MyAds";
-import { useHistory } from "react-router";
 
 const Nav = () => {
   const [itemsInCart] = useContext(AppContext);
   const [user, loading] = useAuthState(auth);
   const [signedOut, setSignedOut] = useState("");
-  const [adsValue, setAdsValue] = useState([]);
 
   useEffect(() => {
     if (loading) return;
