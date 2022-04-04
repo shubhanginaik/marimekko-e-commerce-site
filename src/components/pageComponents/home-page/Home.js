@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.css";
-import { Switch, Route } from "react-router";
-import SingleItem from "../../exploreitems/SingleItem";
+
+import Product from "../../exploreitems/Product";
 
 import { NavLink, Link } from "react-router-dom";
 import { useRouteMatch } from "react-router-dom";
@@ -16,7 +16,6 @@ import topPicks from "./topPicks.svg";
 
 import exploreCollection from "./explore-our-collection.svg";
 import JoinButton from "./join-us-btn.svg";
-import ProductDetail from "../../exploreitems/ProductDetail";
 
 //changed
 import { useEffect, useState } from "react";
@@ -35,7 +34,8 @@ const Home = () => {
   const match = useRouteMatch();
   const fetchProducts = async () => {
     const response = await db.collection("sellcontact");
-    response.onSnapshot((querySnapShot) => {
+    response.orderBy("datetime", "desc")
+    .limit(3).onSnapshot((querySnapShot) => {
       const saveFirebaseProducts = [];
       querySnapShot.forEach((doc) => {
         saveFirebaseProducts.push(doc.data());
@@ -69,9 +69,9 @@ const Home = () => {
   }, [user, loading]);
   //till here
 
-  const recentList = products.slice(0, 3);
-  const itemsListing = recentList.map((item) => (
-    <SingleItem key={item.id} {...item} />
+
+  const itemsListing = products.map((item) => (
+    <Product key={item.id} {...item} />
   ));
   return (
     <div>
@@ -105,16 +105,16 @@ const Home = () => {
       <div className="top-picks">
         <img className="top-picks-line" src={topPicks} alt="" />
         <div className="cards"></div>
-        <Switch>
-          <Route exact path={`${match.path}`}>
+        {/* <Switch>
+          <Route exact path={`${match.path}`}> */}
             <div className="explore-collection">
               <div className="topPicksProduct">{itemsListing}</div>
             </div>
-          </Route>
+          {/* </Route>
           <Route path={`${match.path}/:id`}>
             <ProductDetail />
           </Route>
-        </Switch>
+        </Switch> */}
 
         <NavLink to="/exploreourcollection">
           <img
