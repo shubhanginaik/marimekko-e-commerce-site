@@ -10,11 +10,14 @@ import { ReactComponent as ReactIcon4 } from "./buy-btn.svg";
 import { AppContext } from "../../../Context";
 import { auth, db } from "../../../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
+import MyAds from "./MyAds";
+import { useHistory } from "react-router";
 
 const Nav = () => {
   const [itemsInCart] = useContext(AppContext);
   const [user, loading] = useAuthState(auth);
   const [signedOut, setSignedOut] = useState("");
+  const [adsValue, setAdsValue] = useState([]);
 
   useEffect(() => {
     if (loading) return;
@@ -73,15 +76,25 @@ const Nav = () => {
       <div>
         {user ? (
           <div>
+            <p className="userName_display">Hi {user.displayName}!</p>
             {
-              <button className="dashboard__btn" to="/" exact onClick={logout}>
+              <button
+                className="dashboard__log"
+                onClick={logout}
+                to="/dashboard"
+              >
                 Logout
               </button>
             }
-            <p className="userName_display">Hello {user.displayName}!</p>
+            <p></p>
+            {
+              <NavLink className="dashboard__MyAds" to="/myAds">
+                MyAds
+              </NavLink>
+            }
           </div>
         ) : (
-          ""
+          " "
         )}
       </div>
     </div>

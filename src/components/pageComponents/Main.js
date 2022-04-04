@@ -12,6 +12,7 @@ import { Switch, Route } from "react-router-dom";
 import LoginNew from "../loginComponents/LoginNew";
 import LogoutRedirect from "../loginComponents/LogoutRedirect";
 import Buywith from "../exploreitems/Buywith";
+import MyAds from "./nav-bar/MyAds";
 const Main = (productItems, cartItems) => {
   return (
     <div>
@@ -25,6 +26,7 @@ const Main = (productItems, cartItems) => {
         <Route exact path="/" component={Dashboard} />
         <Route path="/cart" exact component={Cart} />
         <Route path="/" exact component={LogoutRedirect} />
+        <Route path="/myAds" exact component={MyAds} />
         <Cart cartItems={cartItems} />
       </Switch>
     </div>
