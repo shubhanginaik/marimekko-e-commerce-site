@@ -3,7 +3,6 @@ import { AppContext } from "../../Context";
 import trash from "./trash.svg";
 import findMore from "./Find-more-items.svg";
 import "././Cart.css";
-import { items } from "../exploreitems/clothesdata";
 import { useHistory } from "react-router";
 
 const Cart = () => {

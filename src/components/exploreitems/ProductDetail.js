@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { useParams, useHistory } from "react-router";
-import { items } from "./clothesdata";
+import { useParams } from "react-router";
 import "./product-detail.css";
 import { db } from "../../firebase";
 const ProductDetail = () => {
   let { id } = useParams();
   console.log(id);
-  let history = useHistory();
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -28,7 +26,7 @@ const ProductDetail = () => {
   const itemsFilter = products.filter((item) => {
     console.log("item", item);
     console.log("item id", item.id);
-    return item.id == id;
+    return item.id === id;
   });
 
   return (
