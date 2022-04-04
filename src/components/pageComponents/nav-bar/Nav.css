@@ -79,25 +79,19 @@ nav ul li a {
 .person-icon {
   margin-left: 15px;
 }
-.dashboard__btn {
-  height: 60px;
-  width: 80px;
-  background-color: black;
-
-  font-weight: 800;
-  color: white;
-  border: none;
-  font-family: Roboto;
-
-  margin-bottom: 0.5rem;
-  margin-left: 2rem;
-  margin-top: 2rem;
-  border-radius: 6px;
-}
 
 .userName_display {
   color: rgb(116, 151, 35);
 }
+.dashboard__log,
+.dashboard__MyAds {
+  text-decoration: none;
+  paddings-top: 2rem;
+}
+.dashboard__log: shover {
+  color: hotpink;
+}
+
 .buy-product,
 .sell-product {
   height: 60px;
@@ -106,6 +100,7 @@ nav ul li a {
 .cart {
   position: relative;
 }
+
 .items_in_cart {
   height: 30px;
   width: 30px;
@@ -146,9 +141,8 @@ nav ul li a {
     height: 30px;
     width: 30px;
   }
-  .dashboard__btn {
-    height: 50px;
-    width: 70px;
+  .dashboard__log {
+    text-decoration: none;
   }
 }
 
