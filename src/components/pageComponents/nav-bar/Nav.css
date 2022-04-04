@@ -83,7 +83,8 @@ nav ul li a {
 .userName_display {
   color: rgb(116, 151, 35);
 }
-.dashboard__log {
+.dashboard__MyAds {
+  text-decoration: none;
 }
 
 .userName_display {
