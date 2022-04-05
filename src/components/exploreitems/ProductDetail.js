@@ -4,7 +4,6 @@ import "./product-detail.css";
 import { db } from "../../firebase";
 const ProductDetail = () => {
   let { id } = useParams();
-  console.log(id);
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 

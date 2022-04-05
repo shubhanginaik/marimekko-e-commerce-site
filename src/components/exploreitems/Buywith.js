@@ -14,7 +14,6 @@ function Buywith() {
   const match = useRouteMatch();
   useEffect(() => {
     fetchProducts();
-    console.log("products", products);
     // eslint-disable-next-line
   }, []);
   const fetchProducts = async () => {
