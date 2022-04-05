@@ -24,9 +24,7 @@ const ProductDetail = () => {
   }, []);
 
   const itemsFilter = products.filter((item) => {
-    console.log("item", item);
-    console.log("item id", item.id);
-    return item.id == id;
+    return item.id === +id;
   });
 
   return (
