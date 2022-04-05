@@ -24,7 +24,7 @@ const signInWithGoogle = async () => {
     const user = res.user;
     const query = await db
       .collection("users")
-      .where("uid", "==", user.uid)
+      .where("uid", "==", +user.uid)
       .get();
     if (query.docs.length === 0) {
       await db.collection("users").add({
@@ -45,7 +45,6 @@ const signInWithEmailAndPassword = async (email, password) => {
   try {
     await auth.signInWithEmailAndPassword(email, password);
   } catch (err) {
-    console.error(err);
     alert(err.message);
   }
 };
