@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 .hero-banner-section {
   margin: 4rem 8rem;
   display: flex;
@@ -18,7 +19,8 @@
 .hero .join-button {
   cursor: pointer;
 }
-.hero{
+
+.hero {
   position: relative;
 }
 .join-button {
@@ -27,6 +29,7 @@
   left: 8rem;
   height: 15%;
 }
+
 .after-hero-banner {
   width: 100%;
   display: flex;
@@ -35,6 +38,7 @@
   flex-wrap: nowrap;
   margin: 1rem 0;
 }
+
 .mision,
 .vision,
 .goal,
@@ -42,13 +46,11 @@
   width: 25vw;
 }
 
-
 .top-picks-line {
   margin-top: 2rem;
   width: 100%;
   margin: 2rem 0;
 }
-
 
 .topPicksProduct, .explore-collection{
   display: flex;

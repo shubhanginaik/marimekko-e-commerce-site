@@ -78,9 +78,12 @@ const ProductDetail = () => {
           <br></br>
           <div className="product-description">
             <span>
-              <textarea name="category" rows="8" cols="60" defaultValue={itemsFilter[0].description}>
-                
-              </textarea>
+              <textarea
+                name="category"
+                rows="8"
+                cols="60"
+                defaultValue={itemsFilter[0].description}
+              ></textarea>
             </span>
           </div>
         </div>

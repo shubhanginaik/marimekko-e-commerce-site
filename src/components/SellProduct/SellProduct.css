@@ -80,7 +80,7 @@ form {
   height: 100%;
 }
 
-.button{
+.button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -109,7 +109,7 @@ select,
   color: black;
 }
 
-input::placeholder, textarea::placeholder{
+input::placeholder, textarea::placeholder {
   font-weight: normal;
   color: black;
 }
@@ -122,14 +122,13 @@ input::placeholder, textarea::placeholder{
 form textarea {
   padding-top: 0.5rem;
 }
-.submit{
+.submit {
   background: #749723;
   cursor: pointer;
 }
-.disabled_submit{
+.disabled_submit {
   background: #82925e;
 }
-
 
 @media screen and (max-width: 980px) {
   .form__textBox .form_textBox,
