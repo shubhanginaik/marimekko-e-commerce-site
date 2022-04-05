@@ -7,7 +7,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 
   const SellProduct = () => {
   const [showHome, setShowHome] = useState(false);
-  const [user, setUser] = useAuthState(auth);
+  const [user, loading] = useAuthState(auth);
 
   console.log(user);
   const submitHandler = (event) => {
@@ -17,7 +17,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 
   return (
     <div className="sellProduct">
-      {auth && <Form submit={submitHandler} />}
+      {user && <Form submit={submitHandler} />}
       {showHome && <Home />}
     </div>
   );
