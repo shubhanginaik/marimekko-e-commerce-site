@@ -1,31 +1,23 @@
 import React from "react";
 import "./Home.css";
-
 import Product from "../../exploreitems/Product";
-
 import { NavLink, Link } from "react-router-dom";
 import { useRouteMatch } from "react-router-dom";
 import heroBannerLeft from "./hero-banner-left.svg";
 import heroBannerRight from "./hero-banner-right.svg";
-
 import goal from "./goal.svg";
 import how from "./how.svg";
 import mision from "./mision.svg";
 import vision from "./vision.svg";
 import topPicks from "./topPicks.svg";
-
 import exploreCollection from "./explore-our-collection.svg";
 import JoinButton from "./join-us-btn.svg";
-
-//changed
 import { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useHistory } from "react-router-dom";
-
 import { auth, db } from "../../../firebase";
 
 const Home = () => {
-  //changed
   const [user, loading] = useAuthState(auth);
   const [name, setName] = useState("");
   const [products, setProducts] = useState([]);
@@ -47,6 +39,7 @@ const Home = () => {
   useEffect(() => {
     fetchProducts();
   }, []);
+
   const history = useHistory();
 
   const fetchUserName = async () => {
@@ -82,7 +75,6 @@ const Home = () => {
             src={heroBannerLeft}
             alt="heroBanner"
           />
-
           <img
             className="hero-banner-right"
             src={heroBannerRight}
@@ -93,7 +85,6 @@ const Home = () => {
           <img className="join-button" src={JoinButton} alt="join-button" />
         </Link>
       </div>
-
       <div className="after-hero-banner">
         <img className="mision" src={mision} alt="" />
         <img className="vision" src={vision} alt="" />
@@ -105,17 +96,9 @@ const Home = () => {
       <div className="top-picks">
         <img className="top-picks-line" src={topPicks} alt="" />
         <div className="cards"></div>
-        {/* <Switch>
-          <Route exact path={`${match.path}`}> */}
             <div className="explore-collection">
               <div className="topPicksProduct">{itemsListing}</div>
             </div>
-          {/* </Route>
-          <Route path={`${match.path}/:id`}>
-            <ProductDetail />
-          </Route>
-        </Switch> */}
-
         <NavLink to="/exploreourcollection">
           <img
             className="exploreCollection"
