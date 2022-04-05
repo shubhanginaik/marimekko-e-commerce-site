@@ -4,7 +4,6 @@ import "./product-detail.css";
 import { db } from "../../firebase";
 const ProductDetail = () => {
   let { id } = useParams();
-  console.log(id);
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -24,9 +23,7 @@ const ProductDetail = () => {
   }, []);
 
   const itemsFilter = products.filter((item) => {
-    console.log("item", item);
-    console.log("item id", item.id);
-    return item.id == id;
+    return item.id === +id;
   });
 
   return (

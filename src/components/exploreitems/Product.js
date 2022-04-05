@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import { Link, useRouteMatch } from "react-router-dom";
+
 import "./SingleItem.css";
 import { AppContext } from "../../Context";
 
 const Product = (props) => {
-  const match = useRouteMatch();
+  
   const [itemsInCart, setItemsInCart] = useContext(AppContext);
 
   return (

@@ -14,7 +14,7 @@ function Buywith() {
   const match = useRouteMatch();
   useEffect(() => {
     fetchProducts();
-    console.log("products", products);
+    // eslint-disable-next-line
   }, []);
   const fetchProducts = async () => {
     const response = db.collection("sellcontact");
@@ -28,7 +28,7 @@ function Buywith() {
         });
         setProducts(saveFirebaseProducts);
         setIsLoading(false);
-        console.log("products", products);
+        
       });
   };
 
@@ -73,16 +73,7 @@ function Buywith() {
     };
     fetchPreviousData();
   };
-  const searchHandler = (e) => {
-    console.log("search method");
-    setSearchedValue(e.target.value);
-    console.log("serchvalue", searchedValue);
-    setProducts(
-      products.filter((item) =>
-        item.heading.toLowerCase().includes(searchedValue.toLowerCase())
-      )
-    );
-  };
+  
 
   return (
     <div>
