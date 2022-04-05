@@ -2,7 +2,6 @@ import React from "react";
 import "./Home.css";
 import Product from "../../exploreitems/Product";
 import { NavLink, Link } from "react-router-dom";
-import { useRouteMatch } from "react-router-dom";
 import heroBannerLeft from "./hero-banner-left.svg";
 import heroBannerRight from "./hero-banner-right.svg";
 import goal from "./goal.svg";
@@ -23,7 +22,6 @@ const Home = () => {
   const [products, setProducts] = useState([]);
 
   const [isLoading, setIsLoading] = useState(true);
-  const match = useRouteMatch();
   const fetchProducts = async () => {
     const response = await db.collection("sellcontact");
     response.orderBy("datetime", "desc")
@@ -50,6 +48,7 @@ const Home = () => {
         .get();
       const data = await query.docs[0].data();
       setName(data.name);
+      console.log(name);
     } catch (err) {
       console.error(err);
       alert("An error occured while fetching user data");
@@ -60,9 +59,7 @@ const Home = () => {
     if (!user) return history.replace("/");
     fetchUserName();
   }, [user, loading]);
-  //till here
-
-
+  
   const itemsListing = products.map((item) => (
     <Product key={item.id} {...item} />
   ));
