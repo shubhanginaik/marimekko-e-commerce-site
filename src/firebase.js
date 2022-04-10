@@ -1,12 +1,12 @@
 import firebase from "firebase";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyD7iGv8HPvx__E-jxFQXHuqSp2c-KzOl10",
-  authDomain: "fir-auth-marimekko.firebaseapp.com",
-  projectId: "fir-auth-marimekko",
-  storageBucket: "fir-auth-marimekko.appspot.com",
-  messagingSenderId: "159915522440",
-  appId: "1:159915522440:web:f4815dc8d374e7dda8223d",
+  apiKey: "apiKey",
+  authDomain: "marimekko.firebaseapp.com",
+  projectId: "projectId",
+  storageBucket: "marimekko.appspot.com",
+  messagingSenderId: "messageSenderId",
+  appId: "appId",
 };
 const app = firebase.initializeApp(firebaseConfig);
 const auth = app.auth();
